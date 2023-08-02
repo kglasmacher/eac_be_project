@@ -63,6 +63,30 @@ sihag_clinical_data <- read_tsv("sihag_cbioportal/data_clinical_sample.txt", ski
 sihag_clinical_data <- sihag_clinical_data %>%
   filter(CANCER_TYPE_DETAILED == "Esophageal Adenocarcinoma")
 
-sihag_data %>%
+sihag_data <- sihag_data %>%
+  filter(Tumor_Sample_Barcode %in% sihag_clinical_data$SAMPLE_ID) %>%
   filter(Mutation_Status == "SOMATIC") %>%
-  select(Tumor_Sample_Barcode, Chromosome, Start_Position, Reference_Allele, Tumor_Seq_Allele2) 
+  select(Tumor_Sample_Barcode, Chromosome, Start_Position, Reference_Allele, Tumor_Seq_Allele2) %>%
+  mutate(Group = "EAC")
+
+
+## Janjigian et al. data (EAC, WES) ###
+
+# cbioportal link: https://www.cbioportal.org/study/clinicalData?id=egc_trap_msk_2020
+janjigian_data <- read_tsv("janjigian_cbioportal/data_mutations.txt")
+janjigian_sample_data <- read_tsv("janjigian_cbioportal/data_clinical_sample.txt", skip = 4)
+janjigian_patient_data <- read_tsv("janjigian_cbioportal/data_clinical_patient.txt", skip = 4)
+janjigian_sample_data <- janjigian_sample_data %>%
+  filter(TISSUE_SITE == "Esophagus") %>%
+  filter(SAMPLE_TYPE == "Primary") %>%
+  filter(SOMATIC_STATUS == "Matched")
+
+janjigian_data <- janjigian_data %>%
+  filter(Tumor_Sample_Barcode %in% janjigian_sample_data$SAMPLE_ID) %>%
+  select(Tumor_Sample_Barcode, Chromosome, Start_Position, Reference_Allele, Tumor_Seq_Allele2) %>%
+  mutate(Group = "EAC")
+  
+  
+
+
+be_test <- read.csv("Source_Data_File_4 Revised20211107/snv_plus_indels.csv", sep = ";")
