@@ -55,7 +55,7 @@ nones_data <- nones_data %>%
   mutate(Group = "EAC")
 
 
-## Sihag et al. data (EAC) ###
+## Sihag et al. data (EAC) ####
 
 # cbioportal link: https://www.cbioportal.org/study/summary?id=egc_msk_tp53_ccr_2022
 sihag_data <- read_tsv("sihag_cbioportal/data_mutations.txt")
@@ -70,7 +70,7 @@ sihag_data <- sihag_data %>%
   mutate(Group = "EAC")
 
 
-## Janjigian et al. data (EAC, WES) ###
+## Janjigian et al. data (EAC, WES) ####
 
 # cbioportal link: https://www.cbioportal.org/study/clinicalData?id=egc_trap_msk_2020
 janjigian_data <- read_tsv("janjigian_cbioportal/data_mutations.txt")
@@ -87,6 +87,25 @@ janjigian_data <- janjigian_data %>%
   mutate(Group = "EAC")
   
   
-
+## Paulson et al. data (BE, WGS) ####
+# https://www.nature.com/articles/s41467-022-29767-7
 
 be_test <- read.csv("Source_Data_File_4 Revised20211107/snv_plus_indels.csv", sep = ";")
+download.file("https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-022-29767-7/MediaObjects/41467_2022_29767_MOESM3_ESM.xlsx", destfile = "be_data.xlsx") 
+extra_be_files <- readxl::read_xlsx("be_data.xlsx", sheet = 4, skip = 1)
+
+## Stachler et al. (BE, EAC, WES) ####
+
+# files from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-5.zip
+# extra info from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-2.xlsx
+stachler_files <- list.files("stachler_data_files/", full.names=TRUE)
+stachler_data_list <- lapply(stachler_files, read_tsv)
+names(stachler_data_list) <- substr(stachler_files, 22, 42)
+
+stachler_data <- bind_rows(stachler_data_list, .id = "sample")
+stachler_data <- stachler_data %>%
+  mutate(diagnosis = case_when(str_detect(sample, "Primary") ~ "EAC",
+                               str_detect(sample, "Barrett") ~ "BE")) %>%
+  mutate(patient = sub("\\-.*", "", sample)) %>%
+  mutate(Tumor_Sample_Barcode = paste0("Stachler-P", patient, "-", diagnosis)) %>%
+  select(Tumor_Sample_Barcode, Chromosome, Start_position, Reference_Allele, Tumor_Seq_Allele2, Group = diagnosis)
