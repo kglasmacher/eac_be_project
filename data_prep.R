@@ -28,6 +28,20 @@ tcga_data <- tcga_data %>%
 fwrite(tcga_data, "tcga_eac.maf", sep = "\t")
 
 
+## ICGC data (EAC, WGS) ####
+
+# https://dcc.icgc.org/releases/current/Projects/ESAD-UK
+icgc_data <- read_tsv("icgc_ESAD-UK/simple_somatic_mutation.open.ESAD-UK.tsv")
+icgc_data %>%
+  mutate(Tumor_Sample_Barcode = paste0(icgc_donor_id, "-", icgc_sample_id)) %>%
+  mutate(Group = "EAC") %>%
+  select(Tumor_Sample_Barcode, Chromosome = chromosome, Start_Position = chromosome_start, Reference_Allele = reference_genome_allele, Tumor_Seq_Allele2 = mutated_to_allele, Group)
+
+icgc_donor_data <- read_tsv("icgc_ESAD-UK/donor.ESAD-UK.tsv")
+icgc_sample_data <- read_tsv("icgc_ESAD-UK/sample.ESAD-UK.tsv")
+icgc_specimen_data <- read_tsv("icgc_ESAD-UK/specimen.ESAD-UK.tsv")
+
+
 ## Dulak et al. data (EAC) ####
 
 dulak_link <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3678719/bin/NIHMS474888-supplement-6.xlsx"
@@ -141,5 +155,5 @@ naeini_data <- naeini_data %>%
   select(Tumor_Sample_Barcode = Donor.Publication.ID, Chromosome, Start_position = Start_Position, Reference_Allele, Tumor_Seq_Allele2, Group)
 
 
-## new data ####
+
 
