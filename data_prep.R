@@ -90,10 +90,16 @@ janjigian_data <- janjigian_data %>%
 ## Paulson et al. data (BE, WGS) ####
 # https://www.nature.com/articles/s41467-022-29767-7
 
-be_test <- read.csv("Source_Data_File_4 Revised20211107/snv_plus_indels.csv", sep = ";")
-download.file("https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-022-29767-7/MediaObjects/41467_2022_29767_MOESM3_ESM.xlsx", destfile = "be_data.xlsx") 
-extra_be_files <- readxl::read_xlsx("be_data.xlsx", sheet = 4, skip = 1)
-
+paulson_data <- read.csv("Source_Data_File_4 Revised20211107/snv_plus_indels.csv", sep = ";")
+download.file("https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-022-29767-7/MediaObjects/41467_2022_29767_MOESM3_ESM.xlsx", destfile = "paulson_extra_info.xlsx") 
+paulson_extra_info <- readxl::read_xlsx("paulson_extra_info.xlsx", sheet = 4, skip = 1)
+paulson_samples <- paulson_extra_info %>%
+  mutate(Tumor_Sample_Barcode = paste0("P", Patient_ID, "-S", Sample_ID, "-", Cancer_Outcome_Status)) %>%
+  select(Tumor_Sample_Barcode, DNANum = Sample_ID)
+paulson_data <- left_join(paulson_data, paulson_samples, by = "DNANum")
+paulson_data <- paulson_data %>%
+  mutate(Group = "BE") %>%
+  select(Tumor_Sample_Barcode, Chromosome = chrom, Start_position = pos, Reference_Allele = ref, Tumor_Seq_Allele2 = alt, Group)
 
 ## Stachler et al. (BE/EAC, WES) ####
 
@@ -112,14 +118,28 @@ stachler_data <- stachler_data %>%
   select(Tumor_Sample_Barcode, Chromosome, Start_position, Reference_Allele, Tumor_Seq_Allele2, Group = diagnosis)
 
 
-## Newell et al. (BE, WGS) ####
+## Newell et al. (BE, WGS) !only clinical data so far! ####
 
 newell_link <- "https://static-content.springer.com/esm/art%3A10.1186%2Fs12920-019-0476-9/MediaObjects/12920_2019_476_MOESM2_ESM.xlsx"
 if(!file.exists("newell_data.xlsx")){
   download.file(newell_link, destfile = "newell_data.xlsx") 
 }
-newell_data <- readxl::read_xlsx("newell_data.xlsx", sheet = 2, skip = 1)
+newell_clinical_data <- readxl::read_xlsx("newell_data.xlsx", sheet = 2, skip = 1)
 # probably need to filter for only one sample per patient for non-progressor samples
 
 
 ## Naeini et al. (EAC, WGS) ####
+
+naeini_link <- "https://europepmc.org/articles/PMC10232490/bin/41467_2023_38891_MOESM6_ESM.xlsx"
+if(!file.exists("naeini_data.xlsx")){
+  download.file(naeini_link, destfile = "naeini_data.xlsx") 
+}
+naeini_data <- readxl::read_xlsx("naeini_data.xlsx", sheet = 1, skip = 1)
+naeini_data <- naeini_data %>%
+  filter(Mutation_Status == "SOMATIC") %>%
+  mutate(Group = "EAC") %>%
+  select(Tumor_Sample_Barcode = Donor.Publication.ID, Chromosome, Start_position = Start_Position, Reference_Allele, Tumor_Seq_Allele2, Group)
+
+
+## new data ####
+
