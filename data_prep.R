@@ -6,7 +6,7 @@ library(TCGAretriever)
 
 
 ## TCGA data (EAC) ####
-
+# GRCh38
 if (!file.exists("TCGA-ESCA.maf.gz")) {
   get_TCGA_project_MAF(project = "ESCA", filename = "TCGA-ESCA.maf.gz")
 }
@@ -25,25 +25,32 @@ tcga_data <- tcga_data %>%
   mutate(Progression = "EAC") %>%
   mutate(Chromosome = gsub("chr","",Chromosome)) #clean up tcga data frame 
 
-fwrite(tcga_data, "tcga_eac.maf", sep = "\t")
 
-
-## ICGC data (EAC, WGS) ####
-
+## ICGC (PCAWG) data (EAC, WGS) ####
+# GRCh37
 # https://dcc.icgc.org/releases/current/Projects/ESAD-UK
 icgc_data <- read_tsv("icgc_ESAD-UK/simple_somatic_mutation.open.ESAD-UK.tsv")
-icgc_data %>%
-  mutate(Tumor_Sample_Barcode = paste0(icgc_donor_id, "-", icgc_sample_id)) %>%
-  mutate(Group = "EAC") %>%
-  select(Tumor_Sample_Barcode, Chromosome = chromosome, Start_Position = chromosome_start, Reference_Allele = reference_genome_allele, Tumor_Seq_Allele2 = mutated_to_allele, Group)
-
 icgc_donor_data <- read_tsv("icgc_ESAD-UK/donor.ESAD-UK.tsv")
 icgc_sample_data <- read_tsv("icgc_ESAD-UK/sample.ESAD-UK.tsv")
 icgc_specimen_data <- read_tsv("icgc_ESAD-UK/specimen.ESAD-UK.tsv")
 
+# Looks like all of the samples in icgc_data are primary tumor samples anyways
+
+# icgc_specimens <- icgc_specimen_data %>%
+#   select(icgc_specimen_id, specimen_type)
+# icgc_data_test <- left_join(icgc_data, icgc_specimens, by = "icgc_specimen_id")
+# icgc_data_test <- icgc_data_test %>%
+#   mutate(Tumor_Sample_Barcode = paste0(icgc_donor_id, "-", icgc_sample_id)) %>%
+#   select(Tumor_Sample_Barcode, Chromosome = chromosome, Start_Position = chromosome_start, Reference_Allele = reference_genome_allele, Tumor_Seq_Allele2 = mutated_to_allele, specimen_type)
+
+icgc_data <- icgc_data %>%
+  mutate(Tumor_Sample_Barcode = paste0(icgc_donor_id, "-", icgc_sample_id)) %>%
+  mutate(Group = "EAC") %>%
+  select(Tumor_Sample_Barcode, Chromosome = chromosome, Start_Position = chromosome_start, Reference_Allele = reference_genome_allele, Tumor_Seq_Allele2 = mutated_to_allele, Group)
+
 
 ## Dulak et al. data (EAC) ####
-
+# GRCh37
 dulak_link <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3678719/bin/NIHMS474888-supplement-6.xlsx"
 if(!file.exists("dulak_data.xlsx")){
   download.file(dulak_link, destfile = "dulak_data.xlsx") 
@@ -58,7 +65,7 @@ dulak_data <- dulak_data %>%
 
 
 ## Nones et al. data (EAC) ####
-
+# GRCh37
 nones_link <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4596003/bin/NIHMS64791-supplement-Supplementary_data_3.xlsx"
 if(!file.exists("nones_data.xlsx")){
   download.file(nones_link, destfile = "nones_data.xlsx") 
@@ -70,7 +77,7 @@ nones_data <- nones_data %>%
 
 
 ## Sihag et al. data (EAC) ####
-
+# GRCh37
 # cbioportal link: https://www.cbioportal.org/study/summary?id=egc_msk_tp53_ccr_2022
 sihag_data <- read_tsv("sihag_cbioportal/data_mutations.txt")
 sihag_clinical_data <- read_tsv("sihag_cbioportal/data_clinical_sample.txt", skip = 4)
@@ -85,7 +92,7 @@ sihag_data <- sihag_data %>%
 
 
 ## Janjigian et al. data (EAC, WES) ####
-
+# GRCh37
 # cbioportal link: https://www.cbioportal.org/study/clinicalData?id=egc_trap_msk_2020
 janjigian_data <- read_tsv("janjigian_cbioportal/data_mutations.txt")
 janjigian_sample_data <- read_tsv("janjigian_cbioportal/data_clinical_sample.txt", skip = 4)
@@ -113,10 +120,10 @@ paulson_samples <- paulson_extra_info %>%
 paulson_data <- left_join(paulson_data, paulson_samples, by = "DNANum")
 paulson_data <- paulson_data %>%
   mutate(Group = "BE") %>%
-  select(Tumor_Sample_Barcode, Chromosome = chrom, Start_position = pos, Reference_Allele = ref, Tumor_Seq_Allele2 = alt, Group)
+  select(Tumor_Sample_Barcode, Chromosome = chrom, Start_Position = pos, Reference_Allele = ref, Tumor_Seq_Allele2 = alt, Group)
 
 ## Stachler et al. (BE/EAC, WES) ####
-
+# GRCh37
 # files from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-5.zip
 # extra info from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-2.xlsx
 stachler_files <- list.files("stachler_data_files/", full.names=TRUE)
@@ -129,7 +136,7 @@ stachler_data <- stachler_data %>%
                                str_detect(sample, "Barrett") ~ "BE")) %>%
   mutate(patient = sub("\\-.*", "", sample)) %>%
   mutate(Tumor_Sample_Barcode = paste0("Stachler-P", patient, "-", diagnosis)) %>%
-  select(Tumor_Sample_Barcode, Chromosome, Start_position, Reference_Allele, Tumor_Seq_Allele2, Group = diagnosis)
+  select(Tumor_Sample_Barcode, Chromosome, Start_Position = Start_position, Reference_Allele, Tumor_Seq_Allele2, Group = diagnosis)
 
 
 ## Newell et al. (BE, WGS) !only clinical data so far! ####
@@ -143,7 +150,7 @@ newell_clinical_data <- readxl::read_xlsx("newell_data.xlsx", sheet = 2, skip = 
 
 
 ## Naeini et al. (EAC, WGS) ####
-
+# GRCh37
 naeini_link <- "https://europepmc.org/articles/PMC10232490/bin/41467_2023_38891_MOESM6_ESM.xlsx"
 if(!file.exists("naeini_data.xlsx")){
   download.file(naeini_link, destfile = "naeini_data.xlsx") 
@@ -152,7 +159,82 @@ naeini_data <- readxl::read_xlsx("naeini_data.xlsx", sheet = 1, skip = 1)
 naeini_data <- naeini_data %>%
   filter(Mutation_Status == "SOMATIC") %>%
   mutate(Group = "EAC") %>%
-  select(Tumor_Sample_Barcode = Donor.Publication.ID, Chromosome, Start_position = Start_Position, Reference_Allele, Tumor_Seq_Allele2, Group)
+  select(Tumor_Sample_Barcode = Donor.Publication.ID, Chromosome, Start_Position, Reference_Allele, Tumor_Seq_Allele2, Group)
+
+
+
+
+
+## Write MAFs for all ####
+data.table::fwrite(tcga_data, "input_data/tcga.maf", sep = "\t")
+data.table::fwrite(icgc_data, "input_data/icgc.maf", sep = "\t")
+data.table::fwrite(dulak_data, "input_data/dulak.maf", sep = "\t")
+data.table::fwrite(nones_data, "input_data/nones.maf", sep = "\t")
+data.table::fwrite(sihag_data, "input_data/sihag.maf", sep = "\t")
+data.table::fwrite(janjigian_data, "input_data/janjigian.maf", sep = "\t")
+data.table::fwrite(paulson_data, "input_data/paulson.maf", sep = "\t")
+data.table::fwrite(stachler_data, "input_data/stachler.maf", sep = "\t")
+data.table::fwrite(naeini_data, "input_data/naeini.maf", sep = "\t")
+
+
+
+## Preload data ####
+tcga_data_maf <- preload_maf(maf = tcga_data, refset = "ces.refset.hg19", keep_extra_columns = "Group", chain_file = "~/../data/genome_data/hg38ToHg19.over.chain")
+tcga_data_maf <- tcga_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+icgc_data_maf <- preload_maf(maf = icgc_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+icgc_data_maf <- icgc_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+dulak_data_maf <- preload_maf(maf = dulak_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+dulak_data_maf <- dulak_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+nones_data_maf <- preload_maf(maf = nones_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+nones_data_maf <- nones_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+sihag_data_maf <- preload_maf(maf = sihag_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+sihag_data_maf <- sihag_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+janjigian_data_maf <- preload_maf(maf = janjigian_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+janjigian_data_maf <- janjigian_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+paulson_data_maf <- preload_maf(maf = paulson_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+paulson_data_maf <- paulson_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+stachler_data_maf <- preload_maf(maf = stachler_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+stachler_data_maf <- stachler_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+naeini_data_maf <- preload_maf(maf = naeini_data, refset = "ces.refset.hg19", keep_extra_columns = "Group")
+naeini_data_maf <- naeini_data_maf %>% 
+  filter(germline_variant_site == F) %>%
+  filter(repetitive_region == F | cosmic_site_tier %in% 1:3)
+
+
+mafs <- list(tcga = tcga_data_maf, 
+             icgc = icgc_data_maf,
+             dulak = dulak_data_maf,
+             nones = nones_data_maf,
+             sihag = sihag_data_maf,
+             janjigian = janjigian_data_maf,
+             paulson = paulson_data_maf,
+             stachler = stachler_data_maf,
+             naeini = naeini_data_maf) 
+possible_dups <- check_sample_overlap(maf_list = mafs) 
 
 
 
