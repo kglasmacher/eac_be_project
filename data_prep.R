@@ -48,6 +48,15 @@ icgc_data <- icgc_data %>%
   mutate(Group = "EAC") %>%
   select(Tumor_Sample_Barcode, Chromosome = chromosome, Start_Position = chromosome_start, Reference_Allele = reference_genome_allele, Tumor_Seq_Allele2 = mutated_to_allele, Group)
 
+# deduplicate samples in icgc from same donor with over 20% overlap (kept the ones with most variants)
+icgc_duplicates <- c("DO234158-SA130954", "DO234328-SA130951", "DO234165-SA596893", 
+                     "DO234155-SA130958", "DO234162-SA594906", "DO234327-SA130945", 
+                     "DO234150-SA596951", "DO234163-SA130940", "DO234165-SA596918", 
+                     "DO234150-SA596942", "DO234160-SA130949", "DO234326-SA130942", 
+                     "DO234153-SA130961", "DO234444-SA594875")
+
+icgc_data <- icgc_data %>%
+  filter(! Tumor_Sample_Barcode %in% icgc_duplicates)
 
 ## Dulak et al. data (EAC) ####
 # GRCh37
@@ -124,8 +133,8 @@ paulson_data <- paulson_data %>%
 
 ## Stachler et al. (BE/EAC, WES) ####
 # GRCh37
-# files from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-5.zip
-# extra info from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-2.xlsx
+# downloaded files from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-5.zip to stachler_data_files/
+# (extra info from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-2.xlsx)
 stachler_files <- list.files("stachler_data_files/", full.names=TRUE)
 stachler_data_list <- lapply(stachler_files, read_tsv)
 names(stachler_data_list) <- substr(stachler_files, 22, 42)
