@@ -131,7 +131,7 @@ paulson_data <- paulson_data %>%
   mutate(Group = "BE") %>%
   select(Tumor_Sample_Barcode, Chromosome = chrom, Start_Position = pos, Reference_Allele = ref, Tumor_Seq_Allele2 = alt, Group)
 
-## Stachler et al. (BE/EAC, WES) ####
+## Stachler et al. (BE/EAC, WES) maybe get rid of this, look at notes for details####
 # GRCh37
 # downloaded files from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-5.zip to stachler_data_files/
 # (extra info from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552571/bin/NIHMS696113-supplement-2.xlsx)
