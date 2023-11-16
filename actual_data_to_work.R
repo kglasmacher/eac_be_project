@@ -336,7 +336,7 @@ cesa <- trinuc_mutation_rates(cesa, signature_set = "COSMIC_v3.2", signature_exc
 
 
 
-# Create compound variant table ----
+# Create recurrent variant table ----
 # Get consensus coverage across whichever samples you want to include.
 # Here, we use all WES/TGS, but you could choose to exclude some if they don't cover the genes of interest well.
 all_cov = c(cesa$coverage_ranges$exome, cesa$coverage_ranges$targeted)
@@ -350,7 +350,6 @@ variants <- select_variants(cesa, gr = all_cov)
 
 # Further filter variants table based on COSMIC oncogene/TSG classification (exclude nonrecurrent except nonsense for TSGs).
 recurrent_variants <- variants[maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP") & intergenic == F]
-compound <- recurrent_variants
 
 cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, run_name = "recurrent_general")
 cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, samples = cesa$samples[Group == "PN"], run_name = "recurrent_PN")
@@ -359,7 +358,115 @@ cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, samples = cesa$s
 
 
 
+# Create compound variant table ----
+# Get consensus coverage across whichever samples you want to include.
+# Here, we use all WES/TGS, but you could choose to exclude some if they don't cover the genes of interest well.
+all_cov = c(cesa$coverage_ranges$exome, cesa$coverage_ranges$targeted)
 
+# Exclude "exome", since typically "exome+" is what's applicable
+all_cov = all_cov[! names(all_cov) == 'exome'] 
+all_cov = Reduce(GenomicRanges::intersect, all_cov)
+
+# Define however many genes of interest you want
+be_eac_genes = c("TP53", 
+          "NOTCH1", 
+          "NOTCH2", 
+          "ERBB4", 
+          "NFE2L2", 
+          "PIK3CA", 
+          "CDKN2A.p16INK4a",
+          "CDKN2A.p14arf",
+          "ARID1A", 
+          "FAT1", 
+          "EGFR",
+          "ERBB2",
+          "FBXW7",
+          "FGFR3",
+          "RB1",
+          "SMAD4",
+          "SOX2",
+          "KRAS",
+          "CUL3",
+          "ADAMTS18",
+          "ERBB3",
+          "FAT2",
+          "FAT3",
+          "PPP1R3A",
+          "PREX2",
+          "SALL1",
+          "SETD2",
+          "SMO")
+
+# gr argument will make only universally covered variants get returned
+variants <- select_variants(cesa, genes = be_eac_genes, gr = all_cov)
+
+# Further filter variants table based on COSMIC oncogene/TSG classification (exclude nonrecurrent except nonsense for TSGs).
+top_TP53 <- variants[gene == "TP53" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_NOTCH1 <- variants[gene == "NOTCH1" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_NOTCH2 <- variants[gene == "NOTCH2" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_ERBB4 <- variants[gene == "ERBB4" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_NFE2L2 <- variants[gene == "NFE2L2" & (maf_prevalence > 1)]
+top_PIK3CA <- variants[gene == "PIK3CA" & (maf_prevalence >1)]
+top_CDKN2A.p16INK4a <- variants[gene == "CDKN2A.p16INK4A" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_CDKN2A.p14arf <- variants[gene == "CDKN2A.p14arf" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_FAT1 <- variants[gene == "FAT1" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_EGFR <- variants[gene == "EGFR" & (maf_prevalence >1)]
+top_ERBB2 <- variants[gene == "ERBB2" & (maf_prevalence >1)]
+top_FBXW7 <- variants[gene == "FBXW7" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_FGFR3 <- variants[gene == "FGFR3" & (maf_prevalence >1)]
+top_RB1 <- variants[gene == "RB1" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_SMAD4 <- variants[gene == "SMAD4" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_SOX2 <- variants[gene == "SOX2" & (maf_prevalence >1)]
+top_KRAS <- variants[gene == "KRAS" & (maf_prevalence >1)]
+top_CUL3 <- variants[gene == "CUL3" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_ADAMTS18 <- variants[gene == "ADAMTS18" & (maf_prevalence >1)] # unsure about function
+top_ERBB3 <- variants[gene == "ERBB3" & (maf_prevalence >1)]
+top_FAT4 <- variants[gene == "FAT4" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_PPP1R3A <- variants[gene == "PPP1R3A" & (maf_prevalence >1)] # unsure about function
+top_PREX2 <- variants[gene == "PREX2" & (maf_prevalence >1)]
+top_SALL1 <- variants[gene == "SALL1" & (maf_prevalence >1)] # unsure about function
+top_SETD2 <- variants[gene == "SETD2" & (maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP")) & intergenic == F]
+top_SMO <- variants[gene == "SMO" & (maf_prevalence >1)]
+
+
+
+for_comp <- rbind(top_TP53, 
+                  top_NOTCH1, 
+                  top_NOTCH2, 
+                  top_ERBB4, 
+                  top_NFE2L2, 
+                  top_PIK3CA, 
+                  top_CDKN2A.p16INK4a, 
+                  top_CDKN2A.p14arf, 
+                  top_FAT1, 
+                  top_EGFR,
+                  top_ERBB2,
+                  top_FBXW7,
+                  top_FGFR3,
+                  top_RB1,
+                  top_SMAD4,
+                  top_SOX2,
+                  top_KRAS,
+                  top_CUL3,
+                  top_ADAMTS18,
+                  top_ERBB3,
+                  top_FAT4,
+                  top_PPP1R3A,
+                  top_PREX2,
+                  top_SALL1,
+                  top_SETD2,
+                  top_SMO)
+
+# Filter out genes with maf prevalence less than 25 (looking at the data, 25 seemed like a sensible threshold to exclude non-significant results)
+# comp_genes_high_prevalence <- for_comp %>% 
+#   group_by(gene) %>% 
+#   summarize(occurrence = sum(maf_prevalence)) 
+#   # filter(occurrence > 25) 
+# for_comp <- for_comp %>%
+#   filter(gene %in% comp_genes_high_prevalence$gene)
+
+# Define compound variants to find cancer effect sizes at the gene level and not for individual variants
+compound <- define_compound_variants(cesa = cesa, variant_table = for_comp, by = "gene", merge_distance = Inf)
 
 
 
@@ -378,7 +485,7 @@ for(comp_ind in 1:length(compound)){
     this_gene <- this_gene[1]
   }
   
-  cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, model = sequential_lik_dev, 
+  cesa <- ces_variant(cesa = cesa, variants = compound, model = sequential_lik_dev, 
                       ordering_col = 'Group', ordering = c('PN', 'BE', 'EAC'), 
                       lik_args = list(sequential_mut_prop = these_props), run_name = this_gene)
   
