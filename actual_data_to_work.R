@@ -3,6 +3,9 @@ library(data.table)
 library(readxl)
 library(cancereffectsizeR)
 library(TCGAretriever)
+library(BSgenome.Hsapiens.UCSC.hg19)
+library(ces.refset.hg19)
+
 
 
 ## TCGA data (EAC) ####
@@ -156,34 +159,34 @@ data.table::fwrite(janjigian_data, "input_data/janjigian.maf", sep = "\t")
 data.table::fwrite(paulson_data, "input_data/paulson.maf", sep = "\t")
 data.table::fwrite(naeini_data, "input_data/naeini.maf", sep = "\t")
 
-## Get normal data from ESCC step analysis and preload ####
-yokoyama_data <- read_tsv("~/../glasmacherk/Desktop/ESCC_stage_epistasis/input_data/yokoyama.maf")
-yuan_data <- read_tsv("~/../glasmacherk/Desktop/ESCC_stage_epistasis/input_data/yuan.maf")
-martincorena_data <- read_tsv("~/../glasmacherk/Desktop/ESCC_stage_epistasis/input_data/martincorena.maf")
+# ## Get normal data from ESCC step analysis and preload ####
+# yokoyama_data <- read_tsv("~/../glasmacherk/Desktop/ESCC_stage_epistasis/input_data/yokoyama.maf")
+# yuan_data <- read_tsv("~/../glasmacherk/Desktop/ESCC_stage_epistasis/input_data/yuan.maf")
+# martincorena_data <- read_tsv("~/../glasmacherk/Desktop/ESCC_stage_epistasis/input_data/martincorena.maf")
 
-covered_regions_yoko <- "~/../glasmacherk/Desktop/ESCC_stage_epistasis/targeted_regions/yokoyama_covered_regions.bed"
-covered_regions_yuan <- "~/../glasmacherk/Desktop/ESCC_stage_epistasis/targeted_regions/SureSelect_All_Exon_V5_S04380110_Covered_hg19.bed"
-covered_regions_mart <- "~/../glasmacherk/Desktop/ESCC_stage_epistasis/targeted_regions/martincorena_covered_regions.bed"
+# covered_regions_yoko <- "~/../glasmacherk/Desktop/ESCC_stage_epistasis/targeted_regions/yokoyama_covered_regions.bed"
+# covered_regions_yuan <- "~/../glasmacherk/Desktop/ESCC_stage_epistasis/targeted_regions/SureSelect_All_Exon_V5_S04380110_Covered_hg19.bed"
+# covered_regions_mart <- "~/../glasmacherk/Desktop/ESCC_stage_epistasis/targeted_regions/martincorena_covered_regions.bed"
 
-yokoyama_data_maf <- preload_maf(maf = yokoyama_data, refset = "ces.refset.hg19", keep_extra_columns = "Pre_or_Pri")
-yokoyama_data_maf <- yokoyama_data_maf %>%
-  filter(Pre_or_Pri == "Pre") %>%
-  filter(germline_variant_site == F) %>%
-  filter(repetitive_region == F | cosmic_site_tier %in% 1:3) %>%
-  mutate(Group = "PN")
-
-yuan_data_maf <- preload_maf(maf = yuan_data, refset = "ces.refset.hg19", keep_extra_columns = "Pre_or_Pri")
-yuan_data_maf <- yuan_data_maf %>%
-  filter(Pre_or_Pri == "Pre") %>%
-  filter(germline_variant_site == F) %>%
-  filter(repetitive_region == F | cosmic_site_tier %in% 1:3) %>%
-  mutate(Group = "PN")
-
-martincorena_data_maf <- preload_maf(maf = martincorena_data, refset = "ces.refset.hg19", keep_extra_columns = "Pre_or_Pri")
-martincorena_data_maf <- martincorena_data_maf %>% 
-  filter(germline_variant_site == F) %>%
-  filter(repetitive_region == F | cosmic_site_tier %in% 1:3) %>%
-  mutate(Group = "PN")
+# yokoyama_data_maf <- preload_maf(maf = yokoyama_data, refset = "ces.refset.hg19", keep_extra_columns = "Pre_or_Pri")
+# yokoyama_data_maf <- yokoyama_data_maf %>%
+#   filter(Pre_or_Pri == "Pre") %>%
+#   filter(germline_variant_site == F) %>%
+#   filter(repetitive_region == F | cosmic_site_tier %in% 1:3) %>%
+#   mutate(Group = "PN")
+# 
+# yuan_data_maf <- preload_maf(maf = yuan_data, refset = "ces.refset.hg19", keep_extra_columns = "Pre_or_Pri")
+# yuan_data_maf <- yuan_data_maf %>%
+#   filter(Pre_or_Pri == "Pre") %>%
+#   filter(germline_variant_site == F) %>%
+#   filter(repetitive_region == F | cosmic_site_tier %in% 1:3) %>%
+#   mutate(Group = "PN")
+# 
+# martincorena_data_maf <- preload_maf(maf = martincorena_data, refset = "ces.refset.hg19", keep_extra_columns = "Pre_or_Pri")
+# martincorena_data_maf <- martincorena_data_maf %>% 
+#   filter(germline_variant_site == F) %>%
+#   filter(repetitive_region == F | cosmic_site_tier %in% 1:3) %>%
+#   mutate(Group = "PN")
 
 ## Preload data ####
 tcga_data_maf <- preload_maf(maf = tcga_data, refset = "ces.refset.hg19", keep_extra_columns = "Group", chain_file = "~/../data/genome_data/hg38ToHg19.over.chain")
@@ -235,10 +238,11 @@ mafs <- list(tcga = tcga_data_maf,
              nones = nones_data_maf,
              janjigian = janjigian_data_maf,
              paulson = paulson_data_maf,
-             naeini = naeini_data_maf,
-             yokoyama = yokoyama_data_maf,
-             yuan = yuan_data_maf,
-             martincorena = martincorena_data_maf) 
+             naeini = naeini_data_maf#,
+             # yokoyama = yokoyama_data_maf,
+             # yuan = yuan_data_maf,
+             # martincorena = martincorena_data_maf
+             ) 
 possible_dups <- check_sample_overlap(maf_list = mafs) # less than 3% overlap between any samples
 
 
@@ -253,20 +257,20 @@ cesa <- load_maf(cesa, maf = nones_data_maf, coverage = "genome", sample_data_co
 cesa <- load_maf(cesa, maf = janjigian_data_maf, coverage = "exome", sample_data_cols = "Group", maf_name = "janjigian")
 cesa <- load_maf(cesa, maf = paulson_data_maf, coverage = "genome", sample_data_cols = "Group", maf_name = "paulson")
 cesa <- load_maf(cesa, maf = naeini_data_maf, coverage = "genome", sample_data_cols = "Group", maf_name = "naeini")
-cesa <- load_maf(cesa, maf = yuan_data_maf, coverage = "exome", sample_data_cols = "Group", maf_name = "yuan",
-                 covered_regions_name = "yuan", covered_regions = covered_regions_yuan, covered_regions_padding = 100)
-cesa <- load_maf(cesa, maf = yokoyama_data_maf, coverage = "targeted", sample_data_cols = "Group", maf_name = "yokoyama",
-                 covered_regions_name = "yoko", covered_regions = covered_regions_yoko, covered_regions_padding = 100)
-cesa <- load_maf(cesa, maf = martincorena_data_maf, coverage = "targeted", sample_data_cols = "Group", maf_name = "martincorena",
-                 covered_regions_name = "mart", covered_regions = covered_regions_mart, covered_regions_padding = 100)
+# cesa <- load_maf(cesa, maf = yuan_data_maf, coverage = "exome", sample_data_cols = "Group", maf_name = "yuan",
+#                  covered_regions_name = "yuan", covered_regions = covered_regions_yuan, covered_regions_padding = 100)
+# cesa <- load_maf(cesa, maf = yokoyama_data_maf, coverage = "targeted", sample_data_cols = "Group", maf_name = "yokoyama",
+#                  covered_regions_name = "yoko", covered_regions = covered_regions_yoko, covered_regions_padding = 100)
+# cesa <- load_maf(cesa, maf = martincorena_data_maf, coverage = "targeted", sample_data_cols = "Group", maf_name = "martincorena",
+#                  covered_regions_name = "mart", covered_regions = covered_regions_mart, covered_regions_padding = 100)
 
-save_cesa(cesa = cesa,file = "cesa_with_normal_samples_before_generates.rds")
-
-
+save_cesa(cesa = cesa,file = "cesa_without_normal_samples_before_generates.rds")
 
 
 
-cesa <- gene_mutation_rates(cesa, covariates = "ESCA", samples = cesa$samples[Group=="PN"], save_all_dndscv_output = T)
+
+
+# cesa <- gene_mutation_rates(cesa, covariates = "ESCA", samples = cesa$samples[Group=="PN"], save_all_dndscv_output = T)
 cesa <- gene_mutation_rates(cesa, covariates = "ESCA", samples = cesa$samples[Group=="BE"], save_all_dndscv_output = T)
 cesa <- gene_mutation_rates(cesa, covariates = "ESCA", samples = cesa$samples[Group=="EAC"], save_all_dndscv_output = T)
 
@@ -279,44 +283,42 @@ dndscv_gene_names <- cesa$gene_rates$gene
 nsyn_sites <- sapply(RefCDS[dndscv_gene_names], function(x) colSums(x[["L"]])[1])
 
 # Find number of samples in normal and tumor tissue
-samples_in_PN <- length(unique(cesa$dNdScv_results$rate_grp_1$annotmuts$sampleID ))
-samples_in_BE <- length(unique(cesa$dNdScv_results$rate_grp_2$annotmuts$sampleID ))
-samples_in_EAC <- length(unique(cesa$dNdScv_results$rate_grp_3$annotmuts$sampleID ))
+# samples_in_PN <- length(unique(cesa$dNdScv_results$rate_grp_1$annotmuts$sampleID ))
+samples_in_BE <- length(unique(cesa$dNdScv_results$rate_grp_1$annotmuts$sampleID ))
+samples_in_EAC <- length(unique(cesa$dNdScv_results$rate_grp_2$annotmuts$sampleID ))
 
 mut_rate_df <- tibble(gene = cesa$dNdScv_results$rate_grp_1$genemuts$gene_name,
-                      exp_PN_mu = cesa$dNdScv_results$rate_grp_1$genemuts$exp_syn_cv,
-                      exp_BE_mu = cesa$dNdScv_results$rate_grp_2$genemuts$exp_syn_cv,
-                      exp_EAC_mu = cesa$dNdScv_results$rate_grp_3$genemuts$exp_syn_cv)
+                      #exp_PN_mu = cesa$dNdScv_results$rate_grp_1$genemuts$exp_syn_cv,
+                      exp_BE_mu = cesa$dNdScv_results$rate_grp_1$genemuts$exp_syn_cv,
+                      exp_EAC_mu = cesa$dNdScv_results$rate_grp_2$genemuts$exp_syn_cv)
 
 mut_rate_df$n_syn_sites = nsyn_sites[mut_rate_df$gene]
 
 # Mu = ((expected mu)/(number of synonymous sites))/(samples)
 mut_rate_df <- mut_rate_df %>% 
-  mutate(PN_mu = (exp_PN_mu / n_syn_sites) / samples_in_PN) %>%
+  # mutate(PN_mu = (exp_PN_mu / n_syn_sites) / samples_in_PN) %>%
   mutate(BE_mu = (exp_BE_mu / n_syn_sites) / samples_in_BE) %>%
   mutate(EAC_mu = (exp_EAC_mu / n_syn_sites) / samples_in_EAC) %>%
-  mutate(EAC_greater_than_BE = EAC_mu > BE_mu) %>%
-  mutate(BE_greater_than_PN = BE_mu > PN_mu)
+  mutate(EAC_greater_than_BE = EAC_mu > BE_mu) #%>%
+  # mutate(BE_greater_than_PN = BE_mu > PN_mu)
 
 # Check that mutation rate in tumor tissue (stage 0->2) is greater than mutation rate in normal tissue (stage 0->1)
 mut_rate_df$EAC_greater_than_BE %>% table()
-mut_rate_df$BE_greater_than_PN %>% table()
+#mut_rate_df$BE_greater_than_PN %>% table()
 
 # Create mutation rates
 mut_rate_df <- mut_rate_df %>%
-  mutate(mut_rate_PN = PN_mu) %>% # mutation rate from "stage 0->1"
-  mutate(mut_rate_BE = BE_mu - PN_mu) %>% # mutation rate from "stage 1->2"
-  mutate(mut_rate_EAC = EAC_mu - BE_mu) # mutation rate from "stage 2->3"
+  mutate(mut_rate_BE = BE_mu) %>% # mutation rate from "stage 0->1"
+  mutate(mut_rate_EAC = EAC_mu - BE_mu) # mutation rate from "stage 1->2"
 
 mutation_rates <- mut_rate_df
 
 
 # Get proportions of mutation rates ----
 mut_rates_for_p <- mut_rate_df %>%
-  select(gene, PN_mu, BE_mu, EAC_mu, mut_rate_PN, mut_rate_BE, mut_rate_EAC) %>% 
-  mutate(p_1 = mut_rate_PN / EAC_mu) %>% 
-  mutate(p_2 = mut_rate_BE / EAC_mu) %>%
-  mutate(p_3 = mut_rate_EAC / EAC_mu)
+  select(gene, BE_mu, EAC_mu, mut_rate_BE, mut_rate_EAC) %>% 
+  mutate(p_1 = mut_rate_BE / EAC_mu) %>%
+  mutate(p_2 = mut_rate_EAC / EAC_mu)
 
 set_EAC_rates <- mut_rate_df %>%
   select(gene,EAC_mu) %>%
@@ -351,8 +353,8 @@ variants <- select_variants(cesa, gr = all_cov)
 # Further filter variants table based on COSMIC oncogene/TSG classification (exclude nonrecurrent except nonsense for TSGs).
 recurrent_variants <- variants[maf_prevalence > 1 | (aa_ref != "STOP" & aa_alt == "STOP") | (aa_ref == "STOP" & aa_alt != "STOP") & intergenic == F]
 
-cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, run_name = "recurrent_general")
-cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, samples = cesa$samples[Group == "PN"], run_name = "recurrent_PN")
+cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, run_name = "recurrent_across_groups")
+# cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, samples = cesa$samples[Group == "PN"], run_name = "recurrent_PN")
 cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, samples = cesa$samples[Group == "BE"], run_name = "recurrent_BE")
 cesa <- ces_variant(cesa = cesa, variants = recurrent_variants, samples = cesa$samples[Group == "EAC"], run_name = "recurrent_EAC")
 
@@ -486,7 +488,37 @@ for(comp_ind in 1:length(compound)){
   }
   
   cesa <- ces_variant(cesa = cesa, variants = compound, model = sequential_lik_dev, 
-                      ordering_col = 'Group', ordering = c('PN', 'BE', 'EAC'), 
+                      ordering_col = 'Group', ordering = c('BE', 'EAC'), 
                       lik_args = list(sequential_mut_prop = these_props), run_name = this_gene)
   
 }
+
+
+
+
+# Clear gene rates and calculate gene rates for all samples (not separated by progression) for epistasis ----
+cesa <- clear_gene_rates(cesa)
+cesa <- gene_mutation_rates(cesa, covariates = "ESCA", samples = cesa$samples, save_all_dndscv_output = T)
+
+dndscv_gene_names <- cesa$gene_rates$gene
+nsyn_sites <- sapply(RefCDS[dndscv_gene_names], function(x) colSums(x[["L"]])[1])
+
+samples_in_all <- length(unique(cesa$dNdScv_results$rate_grp_1$annotmuts$sampleID ))
+
+mut_rate_df <- tibble(gene = cesa$dNdScv_results$rate_grp_1$genemuts$gene_name,
+                      exp_mu = cesa$dNdScv_results$rate_grp_1$genemuts$exp_syn_cv)
+
+mut_rate_df$n_syn_sites = nsyn_sites[mut_rate_df$gene]
+
+mut_rate_df <- mut_rate_df %>% 
+  mutate(total_mu = (exp_mu / n_syn_sites) / samples_in_all) %>%
+  select(gene, total_mu) %>%
+  data.table::setDT()
+
+cesa <- clear_gene_rates(cesa = cesa)
+cesa <- set_gene_rates(cesa = cesa, rates = mut_rate_df, missing_genes_take_nearest = T) 
+
+
+cesa <- ces_epistasis(cesa, variants = compound, run_name = "epistasis_compound_variants_all_samples")
+
+save_cesa(cesa = cesa,file = "cesa_without_normal_samples_after_generates.rds")
