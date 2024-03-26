@@ -1,0 +1,853 @@
+Study	Sample	Diagnosis	Coverage
+ICGC	DO10839-SA130917	Esophageal Adenocarcinoma	genome
+ICGC	DO10840-SA130919	Esophageal Adenocarcinoma	genome
+ICGC	DO10841-SA130921	Esophageal Adenocarcinoma	genome
+ICGC	DO10842-SA130923	Esophageal Adenocarcinoma	genome
+ICGC	DO10843-SA130925	Esophageal Adenocarcinoma	genome
+ICGC	DO10844-SA130927	Esophageal Adenocarcinoma	genome
+ICGC	DO10858-SA130963	Esophageal Adenocarcinoma	genome
+ICGC	DO10859-SA130965	Esophageal Adenocarcinoma	genome
+ICGC	DO234148-SA594200	Esophageal Adenocarcinoma	genome
+ICGC	DO234149-SA607656	Esophageal Adenocarcinoma	genome
+ICGC	DO234150-SA596941	Esophageal Adenocarcinoma	genome
+ICGC	DO234151-SA596929	Esophageal Adenocarcinoma	genome
+ICGC	DO234152-SA595001	Esophageal Adenocarcinoma	genome
+ICGC	DO234153-SA130960	Esophageal Adenocarcinoma	genome
+ICGC	DO234154-SA595015	Esophageal Adenocarcinoma	genome
+ICGC	DO234155-SA130957	Esophageal Adenocarcinoma	genome
+ICGC	DO234156-SA595033	Esophageal Adenocarcinoma	genome
+ICGC	DO234157-SA596980	Esophageal Adenocarcinoma	genome
+ICGC	DO234158-SA130955	Esophageal Adenocarcinoma	genome
+ICGC	DO234159-SA596876	Esophageal Adenocarcinoma	genome
+ICGC	DO234160-SA130948	Esophageal Adenocarcinoma	genome
+ICGC	DO234161-SA594535	Esophageal Adenocarcinoma	genome
+ICGC	DO234162-SA594893	Esophageal Adenocarcinoma	genome
+ICGC	DO234163-SA130939	Esophageal Adenocarcinoma	genome
+ICGC	DO234164-SA594471	Esophageal Adenocarcinoma	genome
+ICGC	DO234165-SA596911	Esophageal Adenocarcinoma	genome
+ICGC	DO234166-SA594485	Esophageal Adenocarcinoma	genome
+ICGC	DO234167-SA607848	Esophageal Adenocarcinoma	genome
+ICGC	DO234168-SA607842	Esophageal Adenocarcinoma	genome
+ICGC	DO234169-SA607836	Esophageal Adenocarcinoma	genome
+ICGC	DO234170-SA607832	Esophageal Adenocarcinoma	genome
+ICGC	DO234171-SA607822	Esophageal Adenocarcinoma	genome
+ICGC	DO234172-SA607816	Esophageal Adenocarcinoma	genome
+ICGC	DO234173-SA607808	Esophageal Adenocarcinoma	genome
+ICGC	DO234174-SA607806	Esophageal Adenocarcinoma	genome
+ICGC	DO234175-SA607802	Esophageal Adenocarcinoma	genome
+ICGC	DO234176-SA607796	Esophageal Adenocarcinoma	genome
+ICGC	DO234177-SA607794	Esophageal Adenocarcinoma	genome
+ICGC	DO234178-SA607790	Esophageal Adenocarcinoma	genome
+ICGC	DO234179-SA594638	Esophageal Adenocarcinoma	genome
+ICGC	DO234180-SA607788	Esophageal Adenocarcinoma	genome
+ICGC	DO234181-SA607784	Esophageal Adenocarcinoma	genome
+ICGC	DO234182-SA607782	Esophageal Adenocarcinoma	genome
+ICGC	DO234183-SA599208	Esophageal Adenocarcinoma	genome
+ICGC	DO234184-SA599214	Esophageal Adenocarcinoma	genome
+ICGC	DO234185-SA599212	Esophageal Adenocarcinoma	genome
+ICGC	DO234186-SA599204	Esophageal Adenocarcinoma	genome
+ICGC	DO234187-SA599206	Esophageal Adenocarcinoma	genome
+ICGC	DO234188-SA599197	Esophageal Adenocarcinoma	genome
+ICGC	DO234189-SA594582	Esophageal Adenocarcinoma	genome
+ICGC	DO234190-SA594651	Esophageal Adenocarcinoma	genome
+ICGC	DO234191-SA607654	Esophageal Adenocarcinoma	genome
+ICGC	DO234192-SA599210	Esophageal Adenocarcinoma	genome
+ICGC	DO234193-SA599201	Esophageal Adenocarcinoma	genome
+ICGC	DO234194-SA594620	Esophageal Adenocarcinoma	genome
+ICGC	DO234195-SA597244	Esophageal Adenocarcinoma	genome
+ICGC	DO234196-SA594630	Esophageal Adenocarcinoma	genome
+ICGC	DO234197-SA597214	Esophageal Adenocarcinoma	genome
+ICGC	DO234198-SA597247	Esophageal Adenocarcinoma	genome
+ICGC	DO234199-SA597237	Esophageal Adenocarcinoma	genome
+ICGC	DO234200-SA597068	Esophageal Adenocarcinoma	genome
+ICGC	DO234201-SA607719	Esophageal Adenocarcinoma	genome
+ICGC	DO234202-SA597203	Esophageal Adenocarcinoma	genome
+ICGC	DO234203-SA597197	Esophageal Adenocarcinoma	genome
+ICGC	DO234204-SA597188	Esophageal Adenocarcinoma	genome
+ICGC	DO234205-SA597005	Esophageal Adenocarcinoma	genome
+ICGC	DO234206-SA607710	Esophageal Adenocarcinoma	genome
+ICGC	DO234207-SA597172	Esophageal Adenocarcinoma	genome
+ICGC	DO234208-SA597145	Esophageal Adenocarcinoma	genome
+ICGC	DO234209-SA594866	Esophageal Adenocarcinoma	genome
+ICGC	DO234210-SA597047	Esophageal Adenocarcinoma	genome
+ICGC	DO234211-SA594824	Esophageal Adenocarcinoma	genome
+ICGC	DO234212-SA597102	Esophageal Adenocarcinoma	genome
+ICGC	DO234213-SA597129	Esophageal Adenocarcinoma	genome
+ICGC	DO234214-SA597108	Esophageal Adenocarcinoma	genome
+ICGC	DO234215-SA597087	Esophageal Adenocarcinoma	genome
+ICGC	DO234216-SA595141	Esophageal Adenocarcinoma	genome
+ICGC	DO234217-SA595084	Esophageal Adenocarcinoma	genome
+ICGC	DO234218-SA595076	Esophageal Adenocarcinoma	genome
+ICGC	DO234219-SA597029	Esophageal Adenocarcinoma	genome
+ICGC	DO234220-SA595063	Esophageal Adenocarcinoma	genome
+ICGC	DO234221-SA597059	Esophageal Adenocarcinoma	genome
+ICGC	DO234222-SA595055	Esophageal Adenocarcinoma	genome
+ICGC	DO234223-SA595048	Esophageal Adenocarcinoma	genome
+ICGC	DO234224-SA594988	Esophageal Adenocarcinoma	genome
+ICGC	DO234225-SA597021	Esophageal Adenocarcinoma	genome
+ICGC	DO234226-SA594992	Esophageal Adenocarcinoma	genome
+ICGC	DO234227-SA594947	Esophageal Adenocarcinoma	genome
+ICGC	DO234228-SA594422	Esophageal Adenocarcinoma	genome
+ICGC	DO234229-SA596984	Esophageal Adenocarcinoma	genome
+ICGC	DO234230-SA596992	Esophageal Adenocarcinoma	genome
+ICGC	DO234231-SA594303	Esophageal Adenocarcinoma	genome
+ICGC	DO234232-SA594263	Esophageal Adenocarcinoma	genome
+ICGC	DO234233-SA547432	Esophageal Adenocarcinoma	genome
+ICGC	DO234234-SA594240	Esophageal Adenocarcinoma	genome
+ICGC	DO234235-SA596963	Esophageal Adenocarcinoma	genome
+ICGC	DO234236-SA594222	Esophageal Adenocarcinoma	genome
+ICGC	DO234237-SA594208	Esophageal Adenocarcinoma	genome
+ICGC	DO234238-SA599215	Esophageal Adenocarcinoma	genome
+ICGC	DO234239-SA599218	Esophageal Adenocarcinoma	genome
+ICGC	DO234240-SA594455	Esophageal Adenocarcinoma	genome
+ICGC	DO234241-SA594717	Esophageal Adenocarcinoma	genome
+ICGC	DO234242-SA594557	Esophageal Adenocarcinoma	genome
+ICGC	DO234243-SA594385	Esophageal Adenocarcinoma	genome
+ICGC	DO234244-SA594428	Esophageal Adenocarcinoma	genome
+ICGC	DO234245-SA594439	Esophageal Adenocarcinoma	genome
+ICGC	DO234246-SA594443	Esophageal Adenocarcinoma	genome
+ICGC	DO234247-SA594966	Esophageal Adenocarcinoma	genome
+ICGC	DO234248-SA607792	Esophageal Adenocarcinoma	genome
+ICGC	DO234249-SA607786	Esophageal Adenocarcinoma	genome
+ICGC	DO234250-SA594806	Esophageal Adenocarcinoma	genome
+ICGC	DO234251-SA594603	Esophageal Adenocarcinoma	genome
+ICGC	DO234252-SA594372	Esophageal Adenocarcinoma	genome
+ICGC	DO234253-SA597265	Esophageal Adenocarcinoma	genome
+ICGC	DO234254-SA597309	Esophageal Adenocarcinoma	genome
+ICGC	DO234255-SA597346	Esophageal Adenocarcinoma	genome
+ICGC	DO234256-SA597251	Esophageal Adenocarcinoma	genome
+ICGC	DO234257-SA594663	Esophageal Adenocarcinoma	genome
+ICGC	DO234258-SA594985	Esophageal Adenocarcinoma	genome
+ICGC	DO234259-SA547436	Esophageal Adenocarcinoma	genome
+ICGC	DO234260-SA594363	Esophageal Adenocarcinoma	genome
+ICGC	DO234261-SA594547	Esophageal Adenocarcinoma	genome
+ICGC	DO234262-SA597274	Esophageal Adenocarcinoma	genome
+ICGC	DO234263-SA597378	Esophageal Adenocarcinoma	genome
+ICGC	DO234264-SA597327	Esophageal Adenocarcinoma	genome
+ICGC	DO234265-SA597363	Esophageal Adenocarcinoma	genome
+ICGC	DO234266-SA607866	Esophageal Adenocarcinoma	genome
+ICGC	DO234267-SA597293	Esophageal Adenocarcinoma	genome
+ICGC	DO234268-SA597317	Esophageal Adenocarcinoma	genome
+ICGC	DO234269-SA594391	Esophageal Adenocarcinoma	genome
+ICGC	DO234270-SA597356	Esophageal Adenocarcinoma	genome
+ICGC	DO234271-SA599220	Esophageal Adenocarcinoma	genome
+ICGC	DO234272-SA597337	Esophageal Adenocarcinoma	genome
+ICGC	DO234273-SA594851	Esophageal Adenocarcinoma	genome
+ICGC	DO234274-SA599222	Esophageal Adenocarcinoma	genome
+ICGC	DO234275-SA599226	Esophageal Adenocarcinoma	genome
+ICGC	DO234276-SA597387	Esophageal Adenocarcinoma	genome
+ICGC	DO234277-SA595150	Esophageal Adenocarcinoma	genome
+ICGC	DO234278-SA594643	Esophageal Adenocarcinoma	genome
+ICGC	DO234279-SA594769	Esophageal Adenocarcinoma	genome
+ICGC	DO234280-SA599224	Esophageal Adenocarcinoma	genome
+ICGC	DO234281-SA597400	Esophageal Adenocarcinoma	genome
+ICGC	DO234282-SA597422	Esophageal Adenocarcinoma	genome
+ICGC	DO234283-SA597413	Esophageal Adenocarcinoma	genome
+ICGC	DO234285-SA599228	Esophageal Adenocarcinoma	genome
+ICGC	DO234286-SA597405	Esophageal Adenocarcinoma	genome
+ICGC	DO234287-SA599234	Esophageal Adenocarcinoma	genome
+ICGC	DO234288-SA599232	Esophageal Adenocarcinoma	genome
+ICGC	DO234289-SA599236	Esophageal Adenocarcinoma	genome
+ICGC	DO234290-SA599268	Esophageal Adenocarcinoma	genome
+ICGC	DO234291-SA607810	Esophageal Adenocarcinoma	genome
+ICGC	DO234292-SA607804	Esophageal Adenocarcinoma	genome
+ICGC	DO234293-SA599248	Esophageal Adenocarcinoma	genome
+ICGC	DO234294-SA599250	Esophageal Adenocarcinoma	genome
+ICGC	DO234295-SA599256	Esophageal Adenocarcinoma	genome
+ICGC	DO234296-SA599252	Esophageal Adenocarcinoma	genome
+ICGC	DO234297-SA599254	Esophageal Adenocarcinoma	genome
+ICGC	DO234298-SA599260	Esophageal Adenocarcinoma	genome
+ICGC	DO234299-SA599245	Esophageal Adenocarcinoma	genome
+ICGC	DO234300-SA599264	Esophageal Adenocarcinoma	genome
+ICGC	DO234301-SA599258	Esophageal Adenocarcinoma	genome
+ICGC	DO234302-SA607798	Esophageal Adenocarcinoma	genome
+ICGC	DO234303-SA594570	Esophageal Adenocarcinoma	genome
+ICGC	DO234304-SA599272	Esophageal Adenocarcinoma	genome
+ICGC	DO234305-SA599270	Esophageal Adenocarcinoma	genome
+ICGC	DO234306-SA599262	Esophageal Adenocarcinoma	genome
+ICGC	DO234307-SA595153	Esophageal Adenocarcinoma	genome
+ICGC	DO234308-SA594574	Esophageal Adenocarcinoma	genome
+ICGC	DO234309-SA599274	Esophageal Adenocarcinoma	genome
+ICGC	DO234310-SA599278	Esophageal Adenocarcinoma	genome
+ICGC	DO234311-SA597430	Esophageal Adenocarcinoma	genome
+ICGC	DO234312-SA599237	Esophageal Adenocarcinoma	genome
+ICGC	DO234313-SA599276	Esophageal Adenocarcinoma	genome
+ICGC	DO234314-SA599240	Esophageal Adenocarcinoma	genome
+ICGC	DO234315-SA607846	Esophageal Adenocarcinoma	genome
+ICGC	DO234316-SA599242	Esophageal Adenocarcinoma	genome
+ICGC	DO234317-SA599266	Esophageal Adenocarcinoma	genome
+ICGC	DO234318-SA599244	Esophageal Adenocarcinoma	genome
+ICGC	DO234319-SA599287	Esophageal Adenocarcinoma	genome
+ICGC	DO234320-SA599283	Esophageal Adenocarcinoma	genome
+ICGC	DO234321-SA594971	Esophageal Adenocarcinoma	genome
+ICGC	DO234322-SA599281	Esophageal Adenocarcinoma	genome
+ICGC	DO234323-SA599279	Esophageal Adenocarcinoma	genome
+ICGC	DO234324-SA599285	Esophageal Adenocarcinoma	genome
+ICGC	DO234325-SA130931	Esophageal Adenocarcinoma	genome
+ICGC	DO234326-SA130943	Esophageal Adenocarcinoma	genome
+ICGC	DO234327-SA130946	Esophageal Adenocarcinoma	genome
+ICGC	DO234328-SA130952	Esophageal Adenocarcinoma	genome
+ICGC	DO234329-SA594494	Esophageal Adenocarcinoma	genome
+ICGC	DO234330-SA597434	Esophageal Adenocarcinoma	genome
+ICGC	DO234331-SA599293	Esophageal Adenocarcinoma	genome
+ICGC	DO234332-SA599295	Esophageal Adenocarcinoma	genome
+ICGC	DO234333-SA607780	Esophageal Adenocarcinoma	genome
+ICGC	DO234334-SA599289	Esophageal Adenocarcinoma	genome
+ICGC	DO234335-SA599291	Esophageal Adenocarcinoma	genome
+ICGC	DO234336-SA607800	Esophageal Adenocarcinoma	genome
+ICGC	DO234337-SA599294	Esophageal Adenocarcinoma	genome
+ICGC	DO234338-SA594745	Esophageal Adenocarcinoma	genome
+ICGC	DO234339-SA607770	Esophageal Adenocarcinoma	genome
+ICGC	DO234340-SA607740	Esophageal Adenocarcinoma	genome
+ICGC	DO234341-SA607682	Esophageal Adenocarcinoma	genome
+ICGC	DO234342-SA607662	Esophageal Adenocarcinoma	genome
+ICGC	DO234343-SA607660	Esophageal Adenocarcinoma	genome
+ICGC	DO234344-SA594926	Esophageal Adenocarcinoma	genome
+ICGC	DO234345-SA595091	Esophageal Adenocarcinoma	genome
+ICGC	DO234346-SA595096	Esophageal Adenocarcinoma	genome
+ICGC	DO234347-SA595111	Esophageal Adenocarcinoma	genome
+ICGC	DO234348-SA595122	Esophageal Adenocarcinoma	genome
+ICGC	DO234349-SA595127	Esophageal Adenocarcinoma	genome
+ICGC	DO234350-SA607678	Esophageal Adenocarcinoma	genome
+ICGC	DO234351-SA607680	Esophageal Adenocarcinoma	genome
+ICGC	DO234352-SA595137	Esophageal Adenocarcinoma	genome
+ICGC	DO234353-SA607684	Esophageal Adenocarcinoma	genome
+ICGC	DO234354-SA594913	Esophageal Adenocarcinoma	genome
+ICGC	DO234355-SA607703	Esophageal Adenocarcinoma	genome
+ICGC	DO234356-SA607704	Esophageal Adenocarcinoma	genome
+ICGC	DO234357-SA607708	Esophageal Adenocarcinoma	genome
+ICGC	DO234358-SA547440	Esophageal Adenocarcinoma	genome
+ICGC	DO234359-SA607720	Esophageal Adenocarcinoma	genome
+ICGC	DO234360-SA607722	Esophageal Adenocarcinoma	genome
+ICGC	DO234361-SA607724	Esophageal Adenocarcinoma	genome
+ICGC	DO234362-SA607744	Esophageal Adenocarcinoma	genome
+ICGC	DO234363-SA607828	Esophageal Adenocarcinoma	genome
+ICGC	DO234364-SA607834	Esophageal Adenocarcinoma	genome
+ICGC	DO234365-SA607840	Esophageal Adenocarcinoma	genome
+ICGC	DO234366-SA607852	Esophageal Adenocarcinoma	genome
+ICGC	DO234367-SA607856	Esophageal Adenocarcinoma	genome
+ICGC	DO234368-SA607658	Esophageal Adenocarcinoma	genome
+ICGC	DO234369-SA607668	Esophageal Adenocarcinoma	genome
+ICGC	DO234370-SA607734	Esophageal Adenocarcinoma	genome
+ICGC	DO234371-SA594932	Esophageal Adenocarcinoma	genome
+ICGC	DO234372-SA595158	Esophageal Adenocarcinoma	genome
+ICGC	DO234373-SA607736	Esophageal Adenocarcinoma	genome
+ICGC	DO234374-SA607814	Esophageal Adenocarcinoma	genome
+ICGC	DO234375-SA607748	Esophageal Adenocarcinoma	genome
+ICGC	DO234376-SA607707	Esophageal Adenocarcinoma	genome
+ICGC	DO234377-SA607670	Esophageal Adenocarcinoma	genome
+ICGC	DO234378-SA607750	Esophageal Adenocarcinoma	genome
+ICGC	DO234379-SA607760	Esophageal Adenocarcinoma	genome
+ICGC	DO234380-SA547446	Esophageal Adenocarcinoma	genome
+ICGC	DO234381-SA595164	Esophageal Adenocarcinoma	genome
+ICGC	DO234382-SA547442	Esophageal Adenocarcinoma	genome
+ICGC	DO234383-SA607864	Esophageal Adenocarcinoma	genome
+ICGC	DO234384-SA547444	Esophageal Adenocarcinoma	genome
+ICGC	DO234385-SA607830	Esophageal Adenocarcinoma	genome
+ICGC	DO234386-SA607711	Esophageal Adenocarcinoma	genome
+ICGC	DO234387-SA595024	Esophageal Adenocarcinoma	genome
+ICGC	DO234388-SA607812	Esophageal Adenocarcinoma	genome
+ICGC	DO234389-SA607686	Esophageal Adenocarcinoma	genome
+ICGC	DO234390-SA594350	Esophageal Adenocarcinoma	genome
+ICGC	DO234391-SA607754	Esophageal Adenocarcinoma	genome
+ICGC	DO234392-SA607739	Esophageal Adenocarcinoma	genome
+ICGC	DO234393-SA607860	Esophageal Adenocarcinoma	genome
+ICGC	DO234394-SA607726	Esophageal Adenocarcinoma	genome
+ICGC	DO234395-SA607674	Esophageal Adenocarcinoma	genome
+ICGC	DO234396-SA607728	Esophageal Adenocarcinoma	genome
+ICGC	DO234397-SA607713	Esophageal Adenocarcinoma	genome
+ICGC	DO234398-SA594311	Esophageal Adenocarcinoma	genome
+ICGC	DO234399-SA594320	Esophageal Adenocarcinoma	genome
+ICGC	DO234400-SA607717	Esophageal Adenocarcinoma	genome
+ICGC	DO234401-SA607666	Esophageal Adenocarcinoma	genome
+ICGC	DO234402-SA597438	Esophageal Adenocarcinoma	genome
+ICGC	DO234403-SA607742	Esophageal Adenocarcinoma	genome
+ICGC	DO234404-SA607715	Esophageal Adenocarcinoma	genome
+ICGC	DO234405-SA607664	Esophageal Adenocarcinoma	genome
+ICGC	DO234406-SA594775	Esophageal Adenocarcinoma	genome
+ICGC	DO234407-SA607746	Esophageal Adenocarcinoma	genome
+ICGC	DO234408-SA594790	Esophageal Adenocarcinoma	genome
+ICGC	DO234409-SA607696	Esophageal Adenocarcinoma	genome
+ICGC	DO234410-SA607752	Esophageal Adenocarcinoma	genome
+ICGC	DO234411-SA594610	Esophageal Adenocarcinoma	genome
+ICGC	DO234412-SA607694	Esophageal Adenocarcinoma	genome
+ICGC	DO234413-SA607758	Esophageal Adenocarcinoma	genome
+ICGC	DO234414-SA607692	Esophageal Adenocarcinoma	genome
+ICGC	DO234415-SA594704	Esophageal Adenocarcinoma	genome
+ICGC	DO234416-SA607762	Esophageal Adenocarcinoma	genome
+ICGC	DO234417-SA607690	Esophageal Adenocarcinoma	genome
+ICGC	DO234418-SA607688	Esophageal Adenocarcinoma	genome
+ICGC	DO234419-SA607768	Esophageal Adenocarcinoma	genome
+ICGC	DO234420-SA607772	Esophageal Adenocarcinoma	genome
+ICGC	DO234422-SA607774	Esophageal Adenocarcinoma	genome
+ICGC	DO234423-SA607776	Esophageal Adenocarcinoma	genome
+ICGC	DO234424-SA607778	Esophageal Adenocarcinoma	genome
+ICGC	DO234425-SA594693	Esophageal Adenocarcinoma	genome
+ICGC	DO234426-SA594937	Esophageal Adenocarcinoma	genome
+ICGC	DO234427-SA594525	Esophageal Adenocarcinoma	genome
+ICGC	DO234429-SA607818	Esophageal Adenocarcinoma	genome
+ICGC	DO234431-SA607820	Esophageal Adenocarcinoma	genome
+ICGC	DO234433-SA607824	Esophageal Adenocarcinoma	genome
+ICGC	DO234435-SA607826	Esophageal Adenocarcinoma	genome
+ICGC	DO234437-SA607850	Esophageal Adenocarcinoma	genome
+ICGC	DO234439-SA594510	Esophageal Adenocarcinoma	genome
+ICGC	DO234441-SA607854	Esophageal Adenocarcinoma	genome
+ICGC	DO234442-SA607858	Esophageal Adenocarcinoma	genome
+ICGC	DO234443-SA607862	Esophageal Adenocarcinoma	genome
+ICGC	DO234444-SA594885	Esophageal Adenocarcinoma	genome
+ICGC	DO234445-SA594332	Esophageal Adenocarcinoma	genome
+ICGC	DO234446-SA597442	Esophageal Adenocarcinoma	genome
+ICGC	DO234448-SA595010	Esophageal Adenocarcinoma	genome
+ICGC	DO234449-SA607700	Esophageal Adenocarcinoma	genome
+ICGC	DO234450-SA607730	Esophageal Adenocarcinoma	genome
+ICGC	DO234451-SA607676	Esophageal Adenocarcinoma	genome
+ICGC	DO234453-SA607844	Esophageal Adenocarcinoma	genome
+ICGC	DO234455-SA547448	Esophageal Adenocarcinoma	genome
+ICGC	DO234457-SA607672	Esophageal Adenocarcinoma	genome
+ICGC	DO234459-SA547450	Esophageal Adenocarcinoma	genome
+ICGC	DO234461-SA607764	Esophageal Adenocarcinoma	genome
+ICGC	DO234462-SA607838	Esophageal Adenocarcinoma	genome
+ICGC	DO234463-SA607698	Esophageal Adenocarcinoma	genome
+ICGC	DO234464-SA607732	Esophageal Adenocarcinoma	genome
+ICGC	DO234465-SA607766	Esophageal Adenocarcinoma	genome
+ICGC	DO234466-SA607756	Esophageal Adenocarcinoma	genome
+ICGC	DO234467-SA594412	Esophageal Adenocarcinoma	genome
+ICGC	DO234468-SA547455	Esophageal Adenocarcinoma	genome
+ICGC	DO234469-SA547451	Esophageal Adenocarcinoma	genome
+ICGC	DO234470-SA547453	Esophageal Adenocarcinoma	genome
+ICGC	DO50306-SA528782	Esophageal Adenocarcinoma	genome
+ICGC	DO50307-SA528784	Esophageal Adenocarcinoma	genome
+ICGC	DO50309-SA528786	Esophageal Adenocarcinoma	genome
+ICGC	DO50311-SA528788	Esophageal Adenocarcinoma	genome
+ICGC	DO50314-SA528792	Esophageal Adenocarcinoma	genome
+ICGC	DO50315-SA528793	Esophageal Adenocarcinoma	genome
+ICGC	DO50316-SA528795	Esophageal Adenocarcinoma	genome
+ICGC	DO50318-SA528798	Esophageal Adenocarcinoma	genome
+ICGC	DO50319-SA528799	Esophageal Adenocarcinoma	genome
+ICGC	DO50320-SA528802	Esophageal Adenocarcinoma	genome
+ICGC	DO50321-SA528805	Esophageal Adenocarcinoma	genome
+ICGC	DO50323-SA528807	Esophageal Adenocarcinoma	genome
+ICGC	DO50325-SA528810	Esophageal Adenocarcinoma	genome
+ICGC	DO50326-SA528811	Esophageal Adenocarcinoma	genome
+ICGC	DO50327-SA528813	Esophageal Adenocarcinoma	genome
+ICGC	DO50328-SA528912	Esophageal Adenocarcinoma	genome
+ICGC	DO50329-SA528914	Esophageal Adenocarcinoma	genome
+ICGC	DO50330-SA528886	Esophageal Adenocarcinoma	genome
+ICGC	DO50331-SA528815	Esophageal Adenocarcinoma	genome
+ICGC	DO50332-SA528816	Esophageal Adenocarcinoma	genome
+ICGC	DO50334-SA528888	Esophageal Adenocarcinoma	genome
+ICGC	DO50336-SA528902	Esophageal Adenocarcinoma	genome
+ICGC	DO50337-SA528890	Esophageal Adenocarcinoma	genome
+ICGC	DO50338-SA528908	Esophageal Adenocarcinoma	genome
+ICGC	DO50339-SA528918	Esophageal Adenocarcinoma	genome
+ICGC	DO50340-SA528819	Esophageal Adenocarcinoma	genome
+ICGC	DO50341-SA528920	Esophageal Adenocarcinoma	genome
+ICGC	DO50342-SA528892	Esophageal Adenocarcinoma	genome
+ICGC	DO50343-SA528922	Esophageal Adenocarcinoma	genome
+ICGC	DO50345-SA528823	Esophageal Adenocarcinoma	genome
+ICGC	DO50346-SA528903	Esophageal Adenocarcinoma	genome
+ICGC	DO50348-SA528925	Esophageal Adenocarcinoma	genome
+ICGC	DO50349-SA528825	Esophageal Adenocarcinoma	genome
+ICGC	DO50350-SA528827	Esophageal Adenocarcinoma	genome
+ICGC	DO50354-SA528895	Esophageal Adenocarcinoma	genome
+ICGC	DO50355-SA528833	Esophageal Adenocarcinoma	genome
+ICGC	DO50356-SA528836	Esophageal Adenocarcinoma	genome
+ICGC	DO50357-SA528926	Esophageal Adenocarcinoma	genome
+ICGC	DO50362-SA528932	Esophageal Adenocarcinoma	genome
+ICGC	DO50364-SA528838	Esophageal Adenocarcinoma	genome
+ICGC	DO50365-SA528896	Esophageal Adenocarcinoma	genome
+ICGC	DO50367-SA528843	Esophageal Adenocarcinoma	genome
+ICGC	DO50370-SA528845	Esophageal Adenocarcinoma	genome
+ICGC	DO50372-SA528846	Esophageal Adenocarcinoma	genome
+ICGC	DO50374-SA528848	Esophageal Adenocarcinoma	genome
+ICGC	DO50381-SA528854	Esophageal Adenocarcinoma	genome
+ICGC	DO50382-SA528898	Esophageal Adenocarcinoma	genome
+ICGC	DO50383-SA528899	Esophageal Adenocarcinoma	genome
+ICGC	DO50384-SA528941	Esophageal Adenocarcinoma	genome
+ICGC	DO50385-SA528943	Esophageal Adenocarcinoma	genome
+ICGC	DO50387-SA528945	Esophageal Adenocarcinoma	genome
+ICGC	DO50388-SA528855	Esophageal Adenocarcinoma	genome
+ICGC	DO50389-SA528947	Esophageal Adenocarcinoma	genome
+ICGC	DO50390-SA528858	Esophageal Adenocarcinoma	genome
+ICGC	DO50392-SA528861	Esophageal Adenocarcinoma	genome
+ICGC	DO50393-SA528909	Esophageal Adenocarcinoma	genome
+ICGC	DO50395-SA528863	Esophageal Adenocarcinoma	genome
+ICGC	DO50396-SA528906	Esophageal Adenocarcinoma	genome
+ICGC	DO50398-SA528864	Esophageal Adenocarcinoma	genome
+ICGC	DO50399-SA528866	Esophageal Adenocarcinoma	genome
+ICGC	DO50401-SA528870	Esophageal Adenocarcinoma	genome
+ICGC	DO50402-SA528872	Esophageal Adenocarcinoma	genome
+ICGC	DO50403-SA528900	Esophageal Adenocarcinoma	genome
+ICGC	DO50405-SA528874	Esophageal Adenocarcinoma	genome
+ICGC	DO50406-SA528949	Esophageal Adenocarcinoma	genome
+ICGC	DO50407-SA528876	Esophageal Adenocarcinoma	genome
+ICGC	DO50408-SA528878	Esophageal Adenocarcinoma	genome
+ICGC	DO50409-SA528881	Esophageal Adenocarcinoma	genome
+ICGC	DO50410-SA528901	Esophageal Adenocarcinoma	genome
+ICGC	DO50411-SA528883	Esophageal Adenocarcinoma	genome
+ICGC	DO50412-SA528884	Esophageal Adenocarcinoma	genome
+ICGC	DO50434-SA528916	Esophageal Adenocarcinoma	genome
+ICGC	DO50435-SA528822	Esophageal Adenocarcinoma	genome
+ICGC	DO50436-SA528904	Esophageal Adenocarcinoma	genome
+ICGC	DO50437-SA528806	Esophageal Adenocarcinoma	genome
+ICGC	DO50438-SA528809	Esophageal Adenocarcinoma	genome
+ICGC	DO50439-SA528829	Esophageal Adenocarcinoma	genome
+ICGC	DO50440-SA528831	Esophageal Adenocarcinoma	genome
+ICGC	DO50441-SA528993	Esophageal Adenocarcinoma	genome
+ICGC	DO50442-SA528995	Esophageal Adenocarcinoma	genome
+ICGC	DO50443-SA528997	Esophageal Adenocarcinoma	genome
+ICGC	DO50444-SA528999	Esophageal Adenocarcinoma	genome
+ICGC	DO50445-SA528928	Esophageal Adenocarcinoma	genome
+ICGC	DO50446-SA528930	Esophageal Adenocarcinoma	genome
+ICGC	DO50447-SA528839	Esophageal Adenocarcinoma	genome
+ICGC	DO50448-SA528938	Esophageal Adenocarcinoma	genome
+ICGC	DO50449-SA528850	Esophageal Adenocarcinoma	genome
+ICGC	DO50450-SA528939	Esophageal Adenocarcinoma	genome
+ICGC	DO50451-SA528853	Esophageal Adenocarcinoma	genome
+ICGC	DO50452-SA528991	Esophageal Adenocarcinoma	genome
+ICGC	DO50453-SA528790	Esophageal Adenocarcinoma	genome
+ICGC	DO50454-SA528868	Esophageal Adenocarcinoma	genome
+Dulak et al.	ESO-0001-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0013-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0015-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0019-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0023-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0025-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0029-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-003-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-005-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0053-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0059-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0061-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0067-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-007-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0071-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0079-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0103-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0115-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0123-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0129-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0133-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0149-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0167-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-017-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0176-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-021-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0255-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-027-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0280-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-037-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-043-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-045-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0459-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-049-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-051-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0590-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-075-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-077-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-083-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-085-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-0950-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-105-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1059-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1060-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-107-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1096-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-111-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1130-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1133-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-114-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1145-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1154-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-116-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1163-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-117-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-119-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-120-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-122-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-130-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-131-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-135-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-137-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-139-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1427-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-143-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-147-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1481-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1488-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-151-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-152-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-153-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-155-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-157-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-159-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1594-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1608-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-161-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-164-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-165-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-167-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1670-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-169-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-171-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-173-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1733-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1748-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-175-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-177-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-179-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-184-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-185-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-187-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-1872-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-189-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-191-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-2143-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-224-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-2472-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-250-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-251-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-2536-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-327-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-408-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-409-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-512-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-536-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-539-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-555-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-580-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-582-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-601-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-610-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-632-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-640-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-669-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-682-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-683-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-708-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-718-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-720-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-721-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-732-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-752-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-805-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-837-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-838-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-864-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-866-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-874-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-887-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-913-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-916-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-931-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-963-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-D76-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-H01-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-H63-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-K08-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-R61-Tumor	Esophageal Adenocarcinoma	exome
+Dulak et al.	ESO-S41-Tumor	Esophageal Adenocarcinoma	exome
+Naeini et al.	OESO_0001	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0003	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0008	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0009	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0010	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0011	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0013	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0014	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0015	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0019	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0023	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0025	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0027	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0028	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0029	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0031	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0034	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0035	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0038	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0040	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0041	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0045	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0046	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0047	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0048	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0051	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0053	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0055	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0057	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0062	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0064	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0068	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0069	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0070	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0073	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0074	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0075	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0076	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0078	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0079	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0087	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0093	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0094	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0096	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0098	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0099	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0100	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0101	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0102	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0105	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0106	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0107	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0109	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0111	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0113	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0117	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0118	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0119	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0120	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0121	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0125	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0126	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0132	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0138	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0195	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0227	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_0272	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_5007	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6027	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6028	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6032	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6036	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6039	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6064	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6065	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6067	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6070	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6078	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6081	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6082	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6087	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6089	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6091	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_6100	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_J0063	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_P0052	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_P0054	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_P0056	Esophageal Adenocarcinoma	genome
+Naeini et al.	OESO_P0065	Esophageal Adenocarcinoma	genome
+Janjigian et al.	P-0019272-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0023627-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0024205-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0025146-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0026114-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0027661-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0032628-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0032678-T02-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0033558-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0034128-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0035812-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0037409-T01-WES	Esophageal Adenocarcinoma	exome
+Janjigian et al.	P-0045040-T01-WES	Esophageal Adenocarcinoma	exome
+Paulson et al.	P1005-S24100-NCO	Barrett's Esophagus	genome
+Paulson et al.	P1047-S24271-NCO	Barrett's Esophagus	genome
+Paulson et al.	P126-S24346-NCO	Barrett's Esophagus	genome
+Paulson et al.	P130-S24298-NCO	Barrett's Esophagus	genome
+Paulson et al.	P160-S23716-CO	Barrett's Esophagus	genome
+Paulson et al.	P163-S23740-CO	Barrett's Esophagus	genome
+Paulson et al.	P169-S23767-CO	Barrett's Esophagus	genome
+Paulson et al.	P169-S23770-CO	Barrett's Esophagus	genome
+Paulson et al.	P17-S23567-NCO	Barrett's Esophagus	genome
+Paulson et al.	P170-S23794-NCO	Barrett's Esophagus	genome
+Paulson et al.	P184-S24337-NCO	Barrett's Esophagus	genome
+Paulson et al.	P222-S16925N-NCO	Barrett's Esophagus	genome
+Paulson et al.	P222-S24370-NCO	Barrett's Esophagus	genome
+Paulson et al.	P266-S24900-CO	Barrett's Esophagus	genome
+Paulson et al.	P279-S23818-CO	Barrett's Esophagus	genome
+Paulson et al.	P279-S24744-CO	Barrett's Esophagus	genome
+Paulson et al.	P279-S24927-CO	Barrett's Esophagus	genome
+Paulson et al.	P286-S24358-CO	Barrett's Esophagus	genome
+Paulson et al.	P295-S24169-CO	Barrett's Esophagus	genome
+Paulson et al.	P303-S23599-NCO	Barrett's Esophagus	genome
+Paulson et al.	P322-S24406-CO	Barrett's Esophagus	genome
+Paulson et al.	P360-S24813-NCO	Barrett's Esophagus	genome
+Paulson et al.	P381-S23848-NCO	Barrett's Esophagus	genome
+Paulson et al.	P385-S24421-NCO	Barrett's Esophagus	genome
+Paulson et al.	P387-S23659-CO	Barrett's Esophagus	genome
+Paulson et al.	P391-S23872-CO	Barrett's Esophagus	genome
+Paulson et al.	P396-S24445-CO	Barrett's Esophagus	genome
+Paulson et al.	P396-S24457-CO	Barrett's Esophagus	genome
+Paulson et al.	P403-S24391-CO	Barrett's Esophagus	genome
+Paulson et al.	P42-S24289-CO	Barrett's Esophagus	genome
+Paulson et al.	P422-S24481-CO	Barrett's Esophagus	genome
+Paulson et al.	P43-S23585-CO	Barrett's Esophagus	genome
+Paulson et al.	P43-S25093-CO	Barrett's Esophagus	genome
+Paulson et al.	P433-S23890-NCO	Barrett's Esophagus	genome
+Paulson et al.	P433-S23899-NCO	Barrett's Esophagus	genome
+Paulson et al.	P450-S23914-CO	Barrett's Esophagus	genome
+Paulson et al.	P478-S23941-NCO	Barrett's Esophagus	genome
+Paulson et al.	P478-S23947-NCO	Barrett's Esophagus	genome
+Paulson et al.	P483-S23827-NCO	Barrett's Esophagus	genome
+Paulson et al.	P512-S23974-CO	Barrett's Esophagus	genome
+Paulson et al.	P515-S23683-NCO	Barrett's Esophagus	genome
+Paulson et al.	P521-S24651-CO	Barrett's Esophagus	genome
+Paulson et al.	P541-S24226-NCO	Barrett's Esophagus	genome
+Paulson et al.	P55-S24702-NCO	Barrett's Esophagus	genome
+Paulson et al.	P551-S24822-CO	Barrett's Esophagus	genome
+Paulson et al.	P551-S24968N-CO	Barrett's Esophagus	genome
+Paulson et al.	P568-S24693-CO	Barrett's Esophagus	genome
+Paulson et al.	P568-S24888-CO	Barrett's Esophagus	genome
+Paulson et al.	P572-S23776-NCO	Barrett's Esophagus	genome
+Paulson et al.	P572-S24741-NCO	Barrett's Esophagus	genome
+Paulson et al.	P575-S24541-NCO	Barrett's Esophagus	genome
+Paulson et al.	P59-S23647-NCO	Barrett's Esophagus	genome
+Paulson et al.	P59-S24966N-NCO	Barrett's Esophagus	genome
+Paulson et al.	P609-S23998-NCO	Barrett's Esophagus	genome
+Paulson et al.	P611-S24565-NCO	Barrett's Esophagus	genome
+Paulson et al.	P611-S24969N-NCO	Barrett's Esophagus	genome
+Paulson et al.	P619-S24469-NCO	Barrett's Esophagus	genome
+Paulson et al.	P623-S23710-CO	Barrett's Esophagus	genome
+Paulson et al.	P626-S24022-CO	Barrett's Esophagus	genome
+Paulson et al.	P631-S24732-NCO	Barrett's Esophagus	genome
+Paulson et al.	P635-S24037-NCO	Barrett's Esophagus	genome
+Paulson et al.	P639-S24238-NCO	Barrett's Esophagus	genome
+Paulson et al.	P639-S24241-NCO	Barrett's Esophagus	genome
+Paulson et al.	P639-S24970N-NCO	Barrett's Esophagus	genome
+Paulson et al.	P652-S23887-NCO	Barrett's Esophagus	genome
+Paulson et al.	P660-S24055-CO	Barrett's Esophagus	genome
+Paulson et al.	P672-S24547-CO	Barrett's Esophagus	genome
+Paulson et al.	P686-S23635-CO	Barrett's Esophagus	genome
+Paulson et al.	P702-S24852-CO	Barrett's Esophagus	genome
+Paulson et al.	P702-S24861-CO	Barrett's Esophagus	genome
+Paulson et al.	P728-S24268-CO	Barrett's Esophagus	genome
+Paulson et al.	P729-S23755-NCO	Barrett's Esophagus	genome
+Paulson et al.	P74-S24714-CO	Barrett's Esophagus	genome
+Paulson et al.	P740-S24247-CO	Barrett's Esophagus	genome
+Paulson et al.	P772-S24568-CO	Barrett's Esophagus	genome
+Paulson et al.	P779-S24094-CO	Barrett's Esophagus	genome
+Paulson et al.	P806-S24157-NCO	Barrett's Esophagus	genome
+Paulson et al.	P833-S24010-CO	Barrett's Esophagus	genome
+Paulson et al.	P852-S23902-CO	Barrett's Esophagus	genome
+Paulson et al.	P852-S24876-CO	Barrett's Esophagus	genome
+Paulson et al.	P856-S23962-CO	Barrett's Esophagus	genome
+Paulson et al.	P856-S24759-CO	Barrett's Esophagus	genome
+Paulson et al.	P862-S24846-NCO	Barrett's Esophagus	genome
+Paulson et al.	P865-S24073-NCO	Barrett's Esophagus	genome
+Paulson et al.	P88-S23695-NCO	Barrett's Esophagus	genome
+Paulson et al.	P88-S24967N-NCO	Barrett's Esophagus	genome
+Paulson et al.	P891-S24604-CO	Barrett's Esophagus	genome
+Paulson et al.	P900-S23935-NCO	Barrett's Esophagus	genome
+Paulson et al.	P909-S24526-NCO	Barrett's Esophagus	genome
+Paulson et al.	P911-S24622-NCO	Barrett's Esophagus	genome
+Paulson et al.	P915-S25174-NCO	Barrett's Esophagus	genome
+Paulson et al.	P942-S24792-NCO	Barrett's Esophagus	genome
+Paulson et al.	P951-S23809-CO	Barrett's Esophagus	genome
+Paulson et al.	P954-S24208-CO	Barrett's Esophagus	genome
+Paulson et al.	P954-S24971N-CO	Barrett's Esophagus	genome
+Paulson et al.	P956-S24948-NCO	Barrett's Esophagus	genome
+Paulson et al.	P968-S24187-NCO	Barrett's Esophagus	genome
+Paulson et al.	P968-S24190-NCO	Barrett's Esophagus	genome
+Paulson et al.	P977-S23854-CO	Barrett's Esophagus	genome
+Paulson et al.	P995-S24133-CO	Barrett's Esophagus	genome
+Paulson et al.	P997-S24598-CO	Barrett's Esophagus	genome
+Nones et al.	QCMG-66-OESO_0303-OESO-ABNW-20120614-02-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_0384-OESO-ABNW-20120614-04-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_0823-OESO-ABNW-20120614-10-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_0833-OESO-ABNW-20120614-12-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1020-OESO-ABNW-20120614-20-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1074-OESO-ABNW-20120614-22-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1154-OESO-ABNW-20120614-24-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1417-OESO-ABNW-20120614-28-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1430-OESO-ABNW-20120614-30-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1433-OESO-ABNW-20120614-32-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1445-OESO-ABNW-20120614-34-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1463-OESO-ABNW-20120614-36-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1527-OESO-ABNW-20120614-38-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1636-OESO-ABNW-20120614-40-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_1712-OESO-ABNW-20120614-42-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_2291-OESO-ABNW-20120614-46-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_2646-OESO-ABNW-20120614-50-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_2681-OESO-ABNW-20120614-52-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_2804-OESO-ABNW-20120614-54-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_3213-OESO-ABNW-20120614-58-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_3616-OESO-ABNW-20120614-66-TD	Esophageal Adenocarcinoma	genome
+Nones et al.	QCMG-66-OESO_3845-OESO-ABNW-20120614-70-TD	Esophageal Adenocarcinoma	genome
+TCGA	TCGA-2H-A9GF-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GH-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GI-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GK-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GL-01A-12D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GM-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GN-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GO-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-2H-A9GR-01A-12D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-IC-A6RE-01A-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-IG-A4QS-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A6F8-01A-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A6FB-01A-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A6FH-01A-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A938-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A93C-01A-11D-A387-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A93D-01A-11D-A387-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-JY-A93E-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A43C-01A-11D-A247-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A43I-01A-11D-A247-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OE-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OF-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OG-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OH-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OI-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OJ-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4ON-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OO-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OP-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OQ-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OR-01A-11D-A27G-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OS-01A-11D-A28B-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OT-01A-11D-A28B-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OU-01A-11D-A28B-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OW-01A-11D-A28B-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A4OX-01A-21D-A28B-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A88V-01A-11D-A351-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A88Y-01A-11D-A351-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A891-01A-11D-A36J-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NE-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NF-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NG-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NH-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NI-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NJ-01A-11D-A36J-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NL-01A-12D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NM-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NN-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NR-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NS-01A-12D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NT-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NU-01A-11D-A36J-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NV-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L5-A8NW-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-L7-A6VZ-01A-12D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-M9-A5M8-01A-11D-A28B-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-Q9-A6FW-01A-31D-A31U-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6DN-01B-11D-A31U-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6DQ-01B-11D-A31U-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6KZ-01A-11D-A31U-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6L4-01A-11D-A31U-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6L6-01B-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6XG-01B-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6XQ-01B-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A6Y2-01B-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A8W5-01B-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A8W8-01B-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A8WC-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-R6-A8WG-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-RE-A7BO-01A-11D-A33E-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-S8-A6BV-01A-21D-A31U-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-V5-A7RB-01A-11D-A351-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-V5-A7RE-01A-11D-A351-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-V5-AASW-01A-11D-A403-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-V5-AASX-01A-11D-A387-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-VR-A8EQ-01A-11D-A36J-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-VR-AA4D-01A-11D-A37C-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-X8-AAAR-01A-11D-A403-09	Esophageal Adenocarcinoma	exome
+TCGA	TCGA-ZR-A9CJ-01B-11D-A387-09	Esophageal Adenocarcinoma	exome
