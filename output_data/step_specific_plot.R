@@ -113,7 +113,7 @@ selection_plots <- ggplot(stage_data, aes(x = progression, y = selection_intensi
   labs(x="Evolutionary trajectory", y="Scaled selection coefficient", color = "Tissue type") +
   scale_color_manual(labels = c("BE", "EAC"), values = c("#00BFC4", "green")) +
   theme_bw() +
-  facet_wrap(~gene, ncol=4, scales = "free_y") +
+  facet_wrap(~gene, ncol=6, scales = "free_y") +
   expand_limits(y = 0) +
   geom_vline(xintercept = 1.5, lwd = 0.5, color = "lightgrey") +
   geom_hline(yintercept = 0, lwd = 0.5, color = "lightgrey", linetype = "dotted") +
