@@ -305,7 +305,7 @@ for(comp_ind in 1:length(compound)){
     this_gene <- this_gene[1]
   }
   
-  cesa <- ces_variant(cesa = cesa, variants = compound, model = sequential_lik_dev, 
+  cesa <- ces_variant(cesa = cesa, variants = this_comp, model = sequential_lik_dev, 
                       ordering_col = 'Group', ordering = c('BE', 'EAC'), 
                       lik_args = list(sequential_mut_prop = these_props), run_name = this_gene)
   
