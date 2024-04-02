@@ -34,6 +34,7 @@ genes_of_interest <- c("TP53",
                        "ERBB4",
                        "PREX2",
                        "ADAMTS18") #define genes of interest
+
 mut_rates_specific_genes <- mutation_rates %>%
   mutate(highlight = ifelse(gene %in% genes_of_interest, TRUE, FALSE)) #highlight genes of interest
 selected_mut_rates <- mutation_rates %>% 
