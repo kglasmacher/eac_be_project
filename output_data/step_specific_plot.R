@@ -124,6 +124,16 @@ selection_plots <- ggplot(stage_data, aes(x = progression, y = selection_intensi
         axis.ticks.x = element_blank(),
         axis.title=element_text(size = 22),
         legend.position = "none",
-        text = element_text(size = 22)) +
-  scale_x_discrete(labels= expression(N %->% B, B %->% C))
+        text = element_text(size = 22),
+        strip.text = element_text(size = 12),
+        plot.margin = margin(0.5,0.5,0.5,0.5, "cm")) +
+  scale_x_discrete(labels= expression(N %->% BE, BE %->% EAC))
 selection_plots
+
+
+
+ggplot(selection_results, aes(x=si_BE, y=si_EAC)) +
+  geom_point() +
+  geom_label_repel(aes(x=si_BE, y=si_EAC, label=gene)) +
+  labs(x="Selection intensity in BE", y="Selection intensity in EAC")
+  
