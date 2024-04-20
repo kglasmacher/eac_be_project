@@ -46,12 +46,13 @@ selected_mut_rates_longer$progression <- factor(selected_mut_rates_longer$progre
 only_cancer_rates <- selected_mut_rates_longer %>%
   filter(progression == "EAC_mu")
 
-change_mut_rates_plot <- ggplot() + 
+ggplot() + 
   geom_point(data = selected_mut_rates_longer, mapping = aes(x = progression, y = mutation_rate, group = gene, color = gene)) +
-  geom_line(data = selected_mut_rates_longer, mapping = aes(x = progression, y = mutation_rate, group = gene, color = gene)) +
-  geom_text_repel(data = only_cancer_rates, mapping = aes(x = 2.05, y = mutation_rate, label = gene, color = gene), hjust = -1, direction = "y", size = 5) +
-  scale_y_continuous(labels=scientific) + 
-  scale_x_discrete(labels=c("Embryogenesis \nto BE", "BE \nto EAC")) +
+  geom_line(data = selected_mut_rates_longer, mapping = aes(x = progression, y = mutation_rate, group = gene, color = gene), alpha =0.3) +
+  geom_text_repel(data = only_cancer_rates, mapping = aes(x = 2.02, y = mutation_rate, label = gene, color = gene), 
+                  hjust = -0.3, direction = "y", size = 4, segment.size = 0.2) +
+  scale_y_continuous(labels=scientific, expand = c(0,0), limits=c(0, 0.0000032)) + 
+  scale_x_discrete(labels=c("Esophageal organogenesis \nto BE", "Esophageal organogenesis \nto EAC")) +
   scale_color_brewer(palette = "Dark2") +
   labs(x = "Evolutionary trajectory \n", y = "Mutation rate", color = "Gene") +
   theme_bw() +
@@ -62,4 +63,24 @@ change_mut_rates_plot <- ggplot() +
 
 
 
+selected_mut_rates_distinct <- selected_mut_rates %>%
+  pivot_longer(cols = c("mut_rate_BE", "mut_rate_EAC"), names_to = "progression", values_to = "mutation_rate_distinct")
+selected_mut_rates_distinct$progression <- factor(selected_mut_rates_distinct$progression, levels = unique(selected_mut_rates_distinct$progression))
+only_cancer_rates_distinct <- selected_mut_rates_distinct %>%
+  filter(progression == "mut_rate_EAC")
+
+ggplot() + 
+  geom_point(data = selected_mut_rates_distinct, mapping = aes(x = progression, y = mutation_rate_distinct, group = gene, color = gene)) +
+  geom_line(data = selected_mut_rates_distinct, mapping = aes(x = progression, y = mutation_rate_distinct, group = gene, color = gene), alpha =0.3) +
+  geom_text_repel(data = only_cancer_rates_distinct, mapping = aes(x = 2.02, y = mutation_rate_distinct, label = gene, color = gene), 
+                  hjust = -0.25, direction = "y", size = 4, segment.size = 0.2, max.overlaps = 10) +
+  scale_y_continuous(labels=scientific, expand = c(0,0), limits=c(0, 0.0000018)) + 
+  scale_x_discrete(labels=c("Esophageal organogenesis \nto BE", "BE \nto EAC")) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(x = "Evolutionary trajectory \n", y = "Mutation rate", color = "Gene") +
+  theme_bw() +
+  theme(axis.text = element_text(size = 14), 
+        axis.title = element_text(size = 14), 
+        axis.title.x = element_text(vjust = -1.5), 
+        legend.position = "none")
 
