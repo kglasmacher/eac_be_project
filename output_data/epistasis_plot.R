@@ -154,9 +154,8 @@ significant_gene_ep_results <-cesa$epistasis$epistasis_compound_variants_all_sam
   filter(p_epistasis < 0.05)
 
 
-plot_epistasis_results_with_ci(significant_gene_ep_results, "NOTCH1", 500, 35000) # crazy EAC CIs
-plot_epistasis_results_with_ci(significant_gene_ep_results, "TP53", 3500, 11000)
-plot_epistasis_results_with_ci(significant_gene_ep_results, "KRAS", 10000, 10000)
+plot_epistasis_results_with_ci(significant_gene_ep_results, "NOTCH1", 500, 33000) # crazy EAC CIs
+plot_epistasis_results_with_ci(significant_gene_ep_results, "KRAS", 11000, 20000)
 
 
 plot_epistasis_results_with_ci(gene_ep_results, "NOTCH1", 5000, 5000)
@@ -166,4 +165,24 @@ plot_epistasis_results_with_ci(gene_ep_results, "ERBB3", 5000, 5000)
 plot_epistasis_results_with_ci(gene_ep_results, "ERBB2", 5000, 5000)
 plot_epistasis_results_with_ci(gene_ep_results, "ERBB4", 5000, 5000)
 
+
+ggplot(stage_data, aes(x = progression, y = selection_intensity, color = progression)) +
+  geom_point(size=2.5) +
+  geom_errorbar(aes(ymin = ci_low_95, ymax = ci_high, width = 0.25)) +
+  labs(x="Evolutionary trajectory", y="Scaled selection coefficient", color = "Tissue type") +
+  scale_color_manual(labels = c("BE", "EAC"), values = c("#00BFC4", "green")) +
+  theme_bw() +
+  facet_wrap(~gene, ncol=6, scales = "free_y") +
+  expand_limits(y = 0) +
+  geom_vline(xintercept = 1.5, lwd = 0.5, color = "lightgrey") +
+  geom_hline(yintercept = 0, lwd = 0.5, color = "lightgrey", linetype = "dotted") +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(color="black"),
+        axis.ticks.x = element_blank(),
+        axis.title=element_text(size = 22),
+        legend.position = "none",
+        text = element_text(size = 22)) +
+  scale_x_discrete(labels= expression(N %->% B, B %->% C))
 
