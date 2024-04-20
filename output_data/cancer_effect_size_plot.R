@@ -32,7 +32,11 @@ EAC_ces_plot <- ggplot(data = cesa$selection$recurrent_EAC[selection_intensity >
 
 # all_plots <- (all_ces_plot/BE_ces_plot/EAC_ces_plot)
 
+## More ces plots ####
 
+scientific <- function(x){
+  ifelse(x==0, "0", parse(text=gsub("[+]", "", gsub("e", " %*% 10^", label_scientific()(x)))))
+}
 
 # BE density plot
 ggplot(data = cesa$selection$recurrent_BE) +
@@ -41,27 +45,30 @@ ggplot(data = cesa$selection$recurrent_BE) +
   geom_label_repel(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000),
             aes(x = selection_intensity, y = 0, label = variant_name))
 
-ggplot(data = cesa$selection$recurrent_BE) +
-  geom_point(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000), 
-             aes(x = selection_intensity, y = 0), alpha = 1) +
-  geom_point(data = subset(cesa$selection$recurrent_BE, selection_intensity <= 30000), 
-             aes(x = selection_intensity, y = 0), alpha = 0.01) +
-  geom_density(aes(x = selection_intensity), alpha = 0.2, fill = "lightgreen") +
-  geom_label_repel(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000),
-                   aes(x = selection_intensity, y = 0, label = variant_name),
-                   nudge_y = 0.05) +
-  labs(x = "Selection Intensity", y = "Density") +
-  scale_x_log10() +
-  theme_bw()
+be_density <- ggplot(data = cesa$selection$recurrent_BE) +
+  # geom_point(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000), 
+  #            aes(x = selection_intensity, y = 0), alpha = 1) +
+  # geom_point(data = subset(cesa$selection$recurrent_BE, selection_intensity <= 30000), 
+  #            aes(x = selection_intensity, y = 0), alpha = 0.01) +
+  geom_density(aes(x = selection_intensity), alpha = 0.5, fill = "lightgreen") +
+  # geom_label_repel(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000),
+  #                  aes(x = selection_intensity, y = 0, label = variant_name),
+  #                  nudge_y = 0.05) +
+  labs(x = "Selection Intensity", y = "Density of variants") +
+  scale_x_log10(labels=scientific) +
+  theme_bw() +
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))
 
 ggplot(data = cesa$selection$recurrent_BE) +
-  geom_violin(aes(y = 1, x = selection_intensity)) +
-  geom_label_repel(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000),
-                   aes(x = selection_intensity, y = 1, label = variant_name),
-                   nudge_y = 0.05) +
+  geom_violin(aes(y = 1, x = selection_intensity), fill = "lightgreen", alpha = 0.5) +
+  # geom_label_repel(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000),
+  #                  aes(x = selection_intensity, y = 1, label = variant_name),
+  #                  nudge_y = 0.05) +
   labs(x = "Selection Intensity", y = "Density") +
   scale_fill_manual(values = c("lightgreen", "lightblue"), labels = c("<= 30000", "> 30000")) +
-  theme_bw()
+  scale_x_log10() +
+  theme_bw() +
+  theme(axis.text.y=element_blank(), axis.ticks.y=element_blank())
 
 
 # ggplot(cesa$selection$recurrent_BE, aes(x = variant_name, y = selection_intensity, fill = variant_name)) +
@@ -72,7 +79,19 @@ ggplot(data = cesa$selection$recurrent_BE) +
 #   labs(x = "Variant", y = "Selection Intensity", title = "Distribution of Selection Intensity by Variant") +
 #   theme_minimal()
 
-
+eac_density <- ggplot(data = cesa$selection$recurrent_EAC) +
+  # geom_point(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000), 
+  #            aes(x = selection_intensity, y = 0), alpha = 1) +
+  # geom_point(data = subset(cesa$selection$recurrent_BE, selection_intensity <= 30000), 
+  #            aes(x = selection_intensity, y = 0), alpha = 0.01) +
+  geom_density(aes(x = selection_intensity), alpha = 0.5, fill = "lightgreen") +
+  # geom_label_repel(data = subset(cesa$selection$recurrent_BE, selection_intensity > 30000),
+  #                  aes(x = selection_intensity, y = 0, label = variant_name),
+  #                  nudge_y = 0.05) +
+  labs(x = "Selection Intensity", y = "Density of variants") +
+  scale_x_log10(labels=scientific) +
+  theme_bw() +
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))
 
 
 # Create histogram of selection intensity
@@ -95,26 +114,26 @@ ggplot(cesa$selection$recurrent_BE, aes(x = variant_name, y = selection_intensit
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())  # Remove x-axis labels and ticks for better visualization
 
 
-# location_info <- cesa$maf %>%
-#   select(variant_id, Chromosome, Start_Position)
-# 
-# BE_ces_results <- cesa$selection$recurrent_BE %>%
-#   left_join(location_info, by = "variant_id") %>%
-#   arrange(Chromosome, Start_Position) %>%
-#   mutate(location = row_number())
-# 
-# 
-# ggplot(BE_ces_results, aes(x = location, y = selection_intensity)) +
-#   geom_point(color = "blue", alpha = 0.5) +
-#   geom_point(data = subset(BE_ces_results, selection_intensity > 25000), color = "red", size = 2) +
-#   geom_point(data = subset(BE_ces_results, is.na(Start_Position)), color = "black", alpha = 0.3) +
-#   geom_label_repel(data = subset(BE_ces_results, selection_intensity > 25000),
-#                    aes(x = location, y = selection_intensity, label = variant_name)) +
-#   labs(title = "Selection Intensity for Variants",
-#        x = "Location",
-#        y = "Selection Intensity") +
-#   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())  # Remove x-axis labels and ticks for better visualization
+location_info <- cesa$variants %>%
+  select(variant_id, chr, start)
 
+BE_ces_results <- cesa$selection$recurrent_BE %>%
+  left_join(location_info, by = "variant_id") %>%
+  arrange(chr, start) %>%
+  mutate(location = row_number())
+
+
+be_ces_loc <- ggplot(BE_ces_results, aes(x = location, y = selection_intensity)) +
+  geom_point(color = "blue", alpha = 0.5) +
+  geom_point(data = subset(BE_ces_results, selection_intensity > 25000), color = "red", size = 2) +
+  geom_point(data = subset(BE_ces_results, is.na(start)), color = "black", alpha = 0.3) +
+  geom_label_repel(data = subset(BE_ces_results, selection_intensity > 25000),
+                   aes(x = location, y = selection_intensity, label = variant_name)) +
+  labs(x = "Location",
+       y = "Selection Intensity") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank())  # Remove x-axis labels and ticks for better visualization
 
 
 
@@ -141,6 +160,35 @@ ggplot(cesa$selection$recurrent_EAC, aes(x = variant_name, y = selection_intensi
   labs(title = "Selection Intensity for Variants in EAC",
        x = "Variants",
        y = "Selection Intensity") +
-  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())  # Remove x-axis labels and ticks for better visualization
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank()) + # Remove x-axis labels and ticks for better visualization
+  theme_bw()
 
 
+EAC_ces_results <- cesa$selection$recurrent_EAC %>%
+  left_join(location_info, by = "variant_id") %>%
+  arrange(chr, start) %>%
+  mutate(location = row_number())
+
+eac_ces_loc <- ggplot(EAC_ces_results, aes(x = location, y = selection_intensity)) +
+  geom_point(color = "blue", alpha = 0.5) +
+  geom_point(data = subset(EAC_ces_results, selection_intensity > 25000), color = "red", size = 2) +
+  geom_point(data = subset(EAC_ces_results, is.na(start)), color = "black", alpha = 0.3) +
+  geom_label_repel(data = subset(EAC_ces_results, selection_intensity > 25000),
+                   aes(x = location, y = selection_intensity, label = variant_name)) +
+  labs(x = "Location",
+       y = "Selection Intensity") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank()) # Remove x-axis labels and ticks for better visualization
+
+
+ggarrange(be_density, be_ces_loc, eac_density, eac_ces_loc,
+          labels = c("A", "B", "C", "D"),
+          ncol = 2, nrow = 2,
+          widths = c(0.6, 1))
+
+ggarrange(be_density, be_ces_loc, eac_density, eac_ces_loc,
+          labels = c("", "", "", ""),
+          ncol = 2, nrow = 2,
+          widths = c(0.6, 1))
