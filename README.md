@@ -1,6 +1,7 @@
 # Deciphering Mutation Dynamics: A Computational Analysis of Selective Pressures in Barrett's Esophagus and Esophageal Adenocarcinoma
 
 Author: Kira Glasmacher
+
 Advised by Vincent L. Cannataro, PhD and Yulia Dementieva, PhD
 
 This repository contains all scripts used to analyze the data and produce figures and tables.
