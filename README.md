@@ -8,3 +8,4 @@ This repository contains all scripts used to analyze the data and produce figure
 
 1. run prep_data script to clean and prepare all data for the analysis
 2. run final_analysis script for the analysis
+3. see output_data folder to recreate figures and tables
