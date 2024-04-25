@@ -166,23 +166,116 @@ plot_epistasis_results_with_ci(gene_ep_results, "ERBB2", 5000, 5000)
 plot_epistasis_results_with_ci(gene_ep_results, "ERBB4", 5000, 5000)
 
 
-ggplot(stage_data, aes(x = progression, y = selection_intensity, color = progression)) +
-  geom_point(size=2.5) +
-  geom_errorbar(aes(ymin = ci_low_95, ymax = ci_high, width = 0.25)) +
-  labs(x="Evolutionary trajectory", y="Scaled selection coefficient", color = "Tissue type") +
-  scale_color_manual(labels = c("BE", "EAC"), values = c("#00BFC4", "green")) +
+
+
+ggplot(significant_gene_ep_results[variant_A == "SMAD4.1"]) +
+  geom_point(aes(x = 1, y = ces_A0), size=2.5, color = "red") +
+  geom_point(aes(x = 2, y = ces_A_on_B), size=2.5, color = "red") +
+  geom_point(aes(x = 3, y = ces_B0), size=2.5) +
+  geom_point(aes(x = 4, y = ces_B_on_A), size=2.5) +
+  geom_segment(aes(x = 1, xend = 1, y = ci_low_95_ces_A0, yend = ci_high_95_ces_A0), color = "red", linewidth = 1) +
+  geom_segment(aes(x = 2, xend = 2, y = ci_low_95_ces_A_on_B, yend = ci_high_95_ces_A_on_B), color = "red", linewidth = 1) +
+  geom_segment(aes(x = 3, xend = 3, y = ci_low_95_ces_B0, yend = ci_high_95_ces_B0), color = "black", linewidth = 1) +
+  geom_segment(aes(x = 4, xend = 4, y = 0, yend = ci_high_95_ces_B_on_A), color = "black", linewidth = 1) +
   theme_bw() +
-  facet_wrap(~gene, ncol=6, scales = "free_y") +
-  expand_limits(y = 0) +
-  geom_vline(xintercept = 1.5, lwd = 0.5, color = "lightgrey") +
-  geom_hline(yintercept = 0, lwd = 0.5, color = "lightgrey", linetype = "dotted") +
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         axis.line = element_line(color="black"),
         axis.ticks.x = element_blank(),
-        axis.title=element_text(size = 22),
-        legend.position = "none",
-        text = element_text(size = 22)) +
-  scale_x_discrete(labels= expression(N %->% B, B %->% C))
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank()) +
+  expand_limits(y = 0) 
+  # geom_vline(xintercept = 1.5, lwd = 0.5, color = "lightgrey") +
+  # geom_hline(yintercept = 0, lwd = 0.5, color = "lightgrey", linetype = "dotted") +
+  # theme(panel.grid.major = element_blank(), 
+  #       panel.grid.minor = element_blank(),
+  #       panel.background = element_blank(),
+  #       axis.line = element_line(color="black"),
+  #       axis.ticks.x = element_blank(),
+  #       axis.title=element_text(size = 22),
+  #       legend.position = "none",
+  #       text = element_text(size = 22)) 
 
+smad4_plot <- ggplot(significant_gene_ep_results[variant_A == "SMAD4.1"]) +
+  geom_point(aes(x = 1, y = ces_A0), size=2.5, color = "darkred") +
+  geom_point(aes(x = 1.3, y = ces_A_on_B), size=2.5, color = "darkred") +
+  geom_errorbar(aes(x = 1, ymin = ci_low_95_ces_A0, ymax = ci_high_95_ces_A0), color = "darkred", width = 0.2) +
+  geom_errorbar(aes(x = 1.3, ymin = ci_low_95_ces_A_on_B, ymax = ci_high_95_ces_A_on_B), color = "darkred", width = 0.2) +
+  labs(title = "SMAD4", y = "Selection intensity") +
+  scale_x_continuous(breaks=c(1, 1.3),
+                     labels=c("Wildtype KRAS", "Mutant KRAS")) +
+  theme_bw() +
+  theme(axis.title.x = element_blank()) + 
+  # theme(panel.grid.major = element_blank(), 
+  #       panel.grid.minor = element_blank(),
+  #       panel.background = element_blank(),
+  #       axis.line = element_line(color="black"),
+  #       axis.ticks.x = element_blank(),
+  #       axis.text.x = element_blank(),
+  #       axis.title.x = element_blank()) +
+  expand_limits(y = 0) 
+
+kras_plot <- ggplot(significant_gene_ep_results[variant_A == "SMAD4.1"]) +
+  geom_point(aes(x = 1, y = ces_B0), size=2.5, color = "darkblue") +
+  geom_point(aes(x = 1.3, y = ces_B_on_A), size=2.5, color = "darkblue") +
+  geom_errorbar(aes(x = 1, ymin = ci_low_95_ces_B0, ymax = ci_high_95_ces_B0), color = "darkblue", width = 0.2) +
+  geom_errorbar(aes(x = 1.3, ymin = 0, ymax = ci_high_95_ces_B_on_A), color = "darkblue", width = 0.2) +
+  labs(title = "KRAS", y = "Selection intensity") +
+  scale_x_continuous(breaks=c(1, 1.3),
+                   labels=c("Wildtype SMAD4", "Mutant SMAD4")) +
+  theme_bw() +
+  theme(axis.title.x = element_blank()) + 
+  # theme(panel.grid.major = element_blank(), 
+  #       panel.grid.minor = element_blank(),
+  #       panel.background = element_blank(),
+  #       axis.line = element_line(color="black"),
+  #       axis.ticks.x = element_blank(),
+  #       axis.text.x = element_blank(),
+  #       axis.title.x = element_blank()) +
+  expand_limits(y = 0) 
+
+smad4_plot+kras_plot
+
+
+
+
+notch1_plot <- ggplot(significant_gene_ep_results[variant_A == "NOTCH1.1"]) +
+  geom_point(aes(x = 1, y = ces_A0), size=2.5, color = "darkred") +
+  geom_point(aes(x = 1.3, y = ces_A_on_B), size=2.5, color = "darkred") +
+  geom_errorbar(aes(x = 1, ymin = ci_low_95_ces_A0, ymax = ci_high_95_ces_A0), color = "darkred", width = 0.2) +
+  geom_errorbar(aes(x = 1.3, ymin = 0, ymax = ci_high_95_ces_A_on_B), color = "darkred", width = 0.2) +
+  labs(title = "NOTCH1", y = "Selection intensity") +
+  scale_x_continuous(breaks=c(1, 1.3),
+                     labels=c("Wildtype ADAMTS18", "Mutant ADAMTS18")) +
+  theme_bw() +
+  theme(axis.title.x = element_blank()) + 
+  # theme(panel.grid.major = element_blank(), 
+  #       panel.grid.minor = element_blank(),
+  #       panel.background = element_blank(),
+  #       axis.line = element_line(color="black"),
+  #       axis.ticks.x = element_blank(),
+  #       axis.text.x = element_blank(),
+  #       axis.title.x = element_blank()) +
+  expand_limits(y = 0) 
+
+adam_plot <- ggplot(significant_gene_ep_results[variant_A == "NOTCH1.1"]) +
+  geom_point(aes(x = 1, y = ces_B0), size=2.5, color = "darkblue") +
+  geom_point(aes(x = 1.3, y = ces_B_on_A), size=2.5, color = "darkblue") +
+  geom_errorbar(aes(x = 1, ymin = ci_low_95_ces_B0, ymax = ci_high_95_ces_B0), color = "darkblue", width = 0.2) +
+  geom_errorbar(aes(x = 1.3, ymin = ci_low_95_ces_B_on_A, ymax = ci_high_95_ces_B_on_A), color = "darkblue", width = 0.2) +
+  labs(title = "ADAMTS18", y = "Selection intensity") +
+  scale_x_continuous(breaks=c(1, 1.3),
+                     labels=c("Wildtype NOTCH1", "Mutant NOTCH1")) +
+  theme_bw() +
+  theme(axis.title.x = element_blank()) + 
+  # theme(panel.grid.major = element_blank(), 
+  #       panel.grid.minor = element_blank(),
+  #       panel.background = element_blank(),
+  #       axis.line = element_line(color="black"),
+  #       axis.ticks.x = element_blank(),
+  #       axis.text.x = element_blank(),
+  #       axis.title.x = element_blank()) +
+  expand_limits(y = 0) 
+
+notch1_plot+adam_plot
