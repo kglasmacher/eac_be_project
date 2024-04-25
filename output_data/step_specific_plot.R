@@ -110,8 +110,8 @@ stage_data$gene <- reorder(stage_data$gene, -stage_data$selection_intensity)
 selection_plots <- ggplot(stage_data, aes(x = progression, y = selection_intensity, color = progression)) +
   geom_point(size=2.5) +
   geom_errorbar(aes(ymin = ci_low_95, ymax = ci_high, width = 0.25)) +
-  labs(x="Evolutionary trajectory", y="Scaled selection coefficient", color = "Tissue type") +
-  scale_color_manual(labels = c("BE", "EAC"), values = c("#00BFC4", "green")) +
+  labs(x="Evolutionary trajectory", y="Selection intensity", color = "Tissue type") +
+  scale_color_manual(labels = c("BE", "EAC"), values = c("darkblue", "darkred")) +
   theme_bw() +
   facet_wrap(~gene, ncol=6, scales = "free_y") +
   expand_limits(y = 0) +
