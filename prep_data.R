@@ -63,7 +63,7 @@ icgc_data <- icgc_data %>%
 
 ## Dulak et al. data (EAC) ####
 # GRCh37
-dulak_link <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3678719/bin/NIHMS474888-supplement-6.xlsx"
+dulak_link <- "https://pmc.ncbi.nlm.nih.gov/articles/instance/3678719/bin/NIHMS474888-supplement-6.xlsx"
 if(!file.exists("dulak_data.xlsx")){
   download.file(dulak_link, destfile = "dulak_data.xlsx") 
 }
@@ -85,7 +85,7 @@ dulak_data <- dulak_data %>%
 
 ## Nones et al. data (EAC) ####
 # GRCh37
-nones_link <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4596003/bin/NIHMS64791-supplement-Supplementary_data_3.xlsx"
+nones_link <- "https://pmc.ncbi.nlm.nih.gov/articles/instance/4596003/bin/NIHMS64791-supplement-Supplementary_data_3.xlsx"
 if(!file.exists("nones_data.xlsx")){
   download.file(nones_link, destfile = "nones_data.xlsx") 
 }
